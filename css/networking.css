@@ -1,0 +1,106 @@
+/* Networking Page Styles */
+
+/* Project List */
+.project-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.net-project {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--primary-blue);
+  transition: transform 0.3s ease;
+}
+
+.net-project:hover {
+  transform: translateX(8px);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-header h3 {
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.project-tag {
+  background: var(--primary-blue);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.tech {
+  background: var(--bg-light);
+  color: var(--primary-blue);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  border-top: 3px solid var(--primary-blue);
+}
+
+.skill-box h4 {
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.skill-box p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

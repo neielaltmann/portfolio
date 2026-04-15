@@ -1,0 +1,28 @@
+/* Work Page Specific Styles */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-card .card-title {
+  margin-top: auto;
+}
+
+.project-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.project-card .card-text {
+  flex-grow: 1;
+}

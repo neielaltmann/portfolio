@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Neïel Altmann</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">NA</a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-lang="home">Home</a></li>
+        <li><a href="about.html">Over Mij</a></li>
+        <li><a href="work.html" data-lang="work">Werk</a></li>
+        <li><a href="jinet.html">Jinet</a></li>
+        <li><a href="networking.html">Netwerken</a></li>
+        <li><a href="software.html">Software</a></li>
+        <li><a href="blog.html" class="active" data-lang="blog">Blog</a></li>
+        <li><a href="contact.html" data-lang="contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-lang="blogTitle">Blog</h2>
+      <p class="section-subtitle" data-lang="blogDesc">Gedachten, ideeën en project updates</p>
+      
+      <div class="grid grid-2">
+        <article class="card blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">15 april 2026</span>
+            <span class="blog-category">Development</span>
+          </div>
+          <h3 class="card-title">Blog Post Titel</h3>
+          <p class="card-text">Een korte samenvatting van de blog post...</p>
+          <a href="post.html" class="btn btn-primary" data-lang="readMore">Lees meer</a>
+        </article>
+        
+        <article class="card blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">10 april 2026</span>
+            <span class="blog-category">Design</span>
+          </div>
+          <h3 class="card-title">Blog Post Titel</h3>
+          <p class="card-text">Een korte samenvatting van de blog post...</p>
+          <a href="post.html" class="btn btn-primary" data-lang="readMore">Lees meer</a>
+        </article>
+        
+        <article class="card blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">5 april 2026</span>
+            <span class="blog-category">Tutorial</span>
+          </div>
+          <h3 class="card-title">Blog Post Titel</h3>
+          <p class="card-text">Een korte samenvatting van de blog post...</p>
+          <a href="post.html" class="btn btn-primary" data-lang="readMore">Lees meer</a>
+        </article>
+        
+        <article class="card blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">1 april 2026</span>
+            <span class="blog-category">Project</span>
+          </div>
+          <h3 class="card-title">Blog Post Titel</h3>
+          <p class="card-text">Een korte samenvatting van de blog post...</p>
+          <a href="post.html" class="btn btn-primary" data-lang="readMore">Lees meer</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p data-lang="footer">2026 Neïel Altmann. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Language Toggle -->
+  <div class="lang-toggle">
+    <button id="lang-nl" class="lang-btn active">NL</button>
+    <button id="lang-en" class="lang-btn">EN</button>
+  </div>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
