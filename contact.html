@@ -7,73 +7,28 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/contact.css">
   <style>
-    .social-card {
-      text-align: center;
-      padding: 2rem;
-    }
-    .social-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .social-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .social-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-    }
-    .social-link:hover {
-      transform: translateY(-4px);
-    }
-    .email-section {
-      background: var(--bg-light);
-      padding: 2rem;
-      border-radius: 1rem;
-      margin: 2rem 0;
-    }
-    .email-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem;
-      background: white;
-      border-radius: 0.5rem;
-      margin-bottom: 1rem;
-      box-shadow: var(--shadow);
-    }
-    .company-badge {
-      display: inline-block;
-      background: var(--primary-green);
-      color: white;
-      padding: 0.25rem 0.75rem;
-      border-radius: 1rem;
-      font-size: 0.75rem;
-      margin-bottom: 0.5rem;
-    }
-    .personal-badge {
-      display: inline-block;
-      background: var(--primary-blue);
-      color: white;
-      padding: 0.25rem 0.75rem;
-      border-radius: 1rem;
-      font-size: 0.75rem;
-      margin-bottom: 0.5rem;
+    @media (max-width: 768px) {
+      .section > .container > div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
     }
   </style>
 </head>
 <body>
   <nav class="navbar">
     <div class="container nav-container">
-      <a href="index.html" class="logo">NA</a>
+      <a href="index.html" class="logo">Neïel Altmann</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <ul class="nav-links">
         <li><a href="index.html" data-lang="home">Home</a></li>
         <li><a href="about.html">Over Mij</a></li>
         <li><a href="work.html" data-lang="work">Werk</a></li>
-        <li><a href="jinet.html">Jinet</a></li>
+        <li><a href="jinet.html">Jinet Solutions</a></li>
         <li><a href="networking.html">Netwerken</a></li>
         <li><a href="software.html">Software</a></li>
         <li><a href="blog.html" data-lang="blog">Blog</a></li>
@@ -84,120 +39,84 @@
 
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Contact & Socials</h2>
-      <p class="section-subtitle">Bereik me via social media of email</p>
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">Laten we samenwerken</p>
       
-      <!-- Personal Socials -->
-      <h3 style="text-align: center; margin: 3rem 0 2rem; color: var(--primary-blue);">👤 Persoonlijk</h3>
-      <div class="social-grid">
-        <a href="https://www.linkedin.com/in/neielaltmann/" target="_blank" class="social-link">
-          <div class="card social-card">
-            <span class="personal-badge">Persoonlijk</span>
-            <div class="social-icon">💼</div>
-            <h3 class="card-title">LinkedIn</h3>
-            <p class="card-text">Neïel Altmann</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1000px; margin: 0 auto;">
+        <!-- Left Column - Socials -->
+        <div>
+          <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem; font-weight: 700;">Social Media</h3>
+          
+          <div style="margin-bottom: 2rem;">
+            <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-weight: 600;">Persoonlijk</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="https://www.linkedin.com/in/neielaltmann/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
+                <span style="font-weight: 600; color: var(--text-dark);">LinkedIn</span>
+                <span style="color: var(--text-gray); font-size: 0.9rem;">Neïel Altmann</span>
+              </a>
+              <a href="https://www.facebook.com/neielaltmann/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
+                <span style="font-weight: 600; color: var(--text-dark);">Facebook</span>
+                <span style="color: var(--text-gray); font-size: 0.9rem;">Neïel Altmann</span>
+              </a>
+              <a href="https://wa.me/5971234567" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
+                <span style="font-weight: 600; color: var(--text-dark);">WhatsApp</span>
+                <span style="color: var(--text-gray); font-size: 0.9rem;">+597 123 4567</span>
+              </a>
+            </div>
           </div>
-        </a>
-        
-        <a href="https://www.facebook.com/neielaltmann/" target="_blank" class="social-link">
-          <div class="card social-card">
-            <span class="personal-badge">Persoonlijk</span>
-            <div class="social-icon">📘</div>
-            <h3 class="card-title">Facebook</h3>
-            <p class="card-text">Neïel Altmann</p>
-          </div>
-        </a>
-        
-        <a href="https://wa.me/5971234567" target="_blank" class="social-link">
-          <div class="card social-card">
-            <span class="personal-badge">Persoonlijk</span>
-            <div class="social-icon">💬</div>
-            <h3 class="card-title">WhatsApp</h3>
-            <p class="card-text">+597 123 4567</p>
-          </div>
-        </a>
-      </div>
 
-      <!-- Company Socials -->
-      <h3 style="text-align: center; margin: 3rem 0 2rem; color: var(--primary-green);">🏢 Jinet Solutions</h3>
-      <div class="social-grid">
-        <a href="https://www.linkedin.com/company/jinet-solutions/" target="_blank" class="social-link">
-          <div class="card social-card">
-            <span class="company-badge">Bedrijf</span>
-            <div class="social-icon">💼</div>
-            <h3 class="card-title">LinkedIn</h3>
-            <p class="card-text">Jinet Solutions</p>
-          </div>
-        </a>
-        
-        <a href="https://www.facebook.com/jinetsolutions/" target="_blank" class="social-link">
-          <div class="card social-card">
-            <span class="company-badge">Bedrijf</span>
-            <div class="social-icon">📘</div>
-            <h3 class="card-title">Facebook</h3>
-            <p class="card-text">Jinet Solutions</p>
-          </div>
-        </a>
-        
-        <a href="https://www.tiktok.com/@jinetsolutions" target="_blank" class="social-link">
-          <div class="card social-card">
-            <span class="company-badge">Bedrijf</span>
-            <div class="social-icon">🎵</div>
-            <h3 class="card-title">TikTok</h3>
-            <p class="card-text">@jinetsolutions</p>
-          </div>
-        </a>
-        
-        <a href="https://wa.me/5977654321" target="_blank" class="social-link">
-          <div class="card social-card">
-            <span class="company-badge">Bedrijf</span>
-            <div class="social-icon">💬</div>
-            <h3 class="card-title">WhatsApp Business</h3>
-            <p class="card-text">+597 765 4321</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Email Section -->
-      <div class="email-section">
-        <h3 style="text-align: center; margin-bottom: 2rem;">📧 Email</h3>
-        <div class="grid grid-2">
-          <div class="email-item">
-            <span style="font-size: 1.5rem;">👤</span>
-            <div>
-              <strong>Persoonlijk</strong><br>
-              <a href="mailto:neiel.altmann@email.com" style="color: var(--primary-blue);">neiel.altmann@email.com</a>
-            </div>
-          </div>
-          <div class="email-item">
-            <span style="font-size: 1.5rem;">🏢</span>
-            <div>
-              <strong>Jinet Solutions</strong><br>
-              <a href="mailto:info@jinetsolutions.com" style="color: var(--primary-green);">info@jinetsolutions.com</a>
-            </div>
-          </div>
-          <div class="email-item">
-            <span style="font-size: 1.5rem;">💼</span>
-            <div>
-              <strong>ET-IT Consultancy</strong><br>
-              <a href="mailto:n.altmann@et-it.com" style="color: var(--accent-teal);">n.altmann@et-it.com</a>
-            </div>
-          </div>
-          <div class="email-item">
-            <span style="font-size: 1.5rem;">🎓</span>
-            <div>
-              <strong>Stage/Datasur</strong><br>
-              <a href="mailto:neiel@datasur.sr" style="color: var(--text-gray);">neiel@datasur.sr</a>
+          <div>
+            <h4 style="color: var(--primary-green); margin-bottom: 1rem; font-weight: 600;">Jinet Solutions</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="https://www.linkedin.com/company/jinet-solutions/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
+                <span style="font-weight: 600; color: var(--text-dark);">LinkedIn</span>
+                <span style="color: var(--text-gray); font-size: 0.9rem;">Jinet Solutions</span>
+              </a>
+              <a href="https://www.facebook.com/jinetsolutions/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
+                <span style="font-weight: 600; color: var(--text-dark);">Facebook</span>
+                <span style="color: var(--text-gray); font-size: 0.9rem;">Jinet Solutions</span>
+              </a>
+              <a href="https://www.tiktok.com/@jinetsolutions" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
+                <span style="font-weight: 600; color: var(--text-dark);">TikTok</span>
+                <span style="color: var(--text-gray); font-size: 0.9rem;">@jinetsolutions</span>
+              </a>
+              <a href="https://wa.me/5977654321" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
+                <span style="font-weight: 600; color: var(--text-dark);">WhatsApp Business</span>
+                <span style="color: var(--text-gray); font-size: 0.9rem;">+597 765 4321</span>
+              </a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Location -->
-      <div class="card" style="text-align: center; margin-top: 2rem;">
-        <h3 class="card-title">📍 Locatie</h3>
-        <p class="card-text">Paramaribo, Suriname</p>
-        <p style="color: var(--text-light); font-size: 0.9rem;">Beschikbaar voor remote werk en projecten</p>
+        <!-- Right Column - Email & Location -->
+        <div>
+          <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem; font-weight: 700;">Email</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem;">
+            <div style="padding: 1.25rem; background: var(--bg-light); border-radius: 0.5rem; border-left: 4px solid var(--primary-blue);">
+              <strong style="display: block; margin-bottom: 0.25rem; color: var(--text-dark);">Persoonlijk</strong>
+              <a href="mailto:neiel.altmann@email.com" style="color: var(--primary-blue); text-decoration: none;">neiel.altmann@email.com</a>
+            </div>
+            <div style="padding: 1.25rem; background: var(--bg-light); border-radius: 0.5rem; border-left: 4px solid var(--primary-green);">
+              <strong style="display: block; margin-bottom: 0.25rem; color: var(--text-dark);">Jinet Solutions</strong>
+              <a href="mailto:info@jinetsolutions.com" style="color: var(--primary-green); text-decoration: none;">info@jinetsolutions.com</a>
+            </div>
+            <div style="padding: 1.25rem; background: var(--bg-light); border-radius: 0.5rem; border-left: 4px solid var(--accent-teal);">
+              <strong style="display: block; margin-bottom: 0.25rem; color: var(--text-dark);">ET-IT Consultancy</strong>
+              <a href="mailto:n.altmann@et-it.com" style="color: var(--accent-teal); text-decoration: none;">n.altmann@et-it.com</a>
+            </div>
+            <div style="padding: 1.25rem; background: var(--bg-light); border-radius: 0.5rem; border-left: 4px solid var(--text-gray);">
+              <strong style="display: block; margin-bottom: 0.25rem; color: var(--text-dark);">Stage/Datasur</strong>
+              <a href="mailto:neiel@datasur.sr" style="color: var(--text-gray); text-decoration: none;">neiel@datasur.sr</a>
+            </div>
+          </div>
+
+          <h3 style="margin-bottom: 1rem; font-size: 1.5rem; font-weight: 700;">Locatie</h3>
+          <div style="padding: 2rem; background: var(--primary-blue); color: white; border-radius: 0.75rem; text-align: center;">
+            <p style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Paramaribo, Suriname</p>
+            <p style="opacity: 0.9;">Beschikbaar voor remote werk en projecten</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

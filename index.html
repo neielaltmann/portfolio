@@ -10,12 +10,17 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container nav-container">
-      <a href="index.html" class="logo">NA</a>
+      <a href="index.html" class="logo">Neïel Altmann</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <ul class="nav-links">
         <li><a href="index.html" class="active" data-lang="home">Home</a></li>
         <li><a href="about.html">Over Mij</a></li>
         <li><a href="work.html" data-lang="work">Werk</a></li>
-        <li><a href="jinet.html">Jinet</a></li>
+        <li><a href="jinet.html">Jinet Solutions</a></li>
         <li><a href="networking.html">Netwerken</a></li>
         <li><a href="software.html">Software</a></li>
         <li><a href="blog.html" data-lang="blog">Blog</a></li>
@@ -25,41 +30,68 @@
   </nav>
 
   <!-- Hero Section with Photo -->
-  <section class="hero" style="padding: 4rem 0;">
+  <section class="hero" style="padding: 6rem 0;">
     <div class="container">
-      <div style="display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap;">
-        <!-- Photo - Square on desktop, Circle on mobile -->
-        <div style="flex-shrink: 0;">
-          <img src="img/me.jpg" alt="Neïel Altmann" class="hero-photo">
-        </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto;">
         <!-- Info -->
-        <div style="text-align: left; max-width: 500px;">
-          <span style="background: var(--primary-blue); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">👋 Welkom op mijn portfolio</span>
-          <h1 style="font-size: 2.75rem; margin: 1rem 0 0.5rem; line-height: 1.2;">Hi, ik ben <span style="color: var(--primary-blue);">Neïel</span></h1>
-          <p style="font-size: 1.25rem; color: var(--text-gray); margin-bottom: 0.5rem;">Senior System Engineer & Junior Software Developer</p>
-          <p style="font-size: 1rem; color: var(--text-light); margin-bottom: 1.5rem;">📍 Paramaribo, Suriname | 🇸🇷</p>
-          <div class="flex gap-4" style="flex-wrap: wrap; margin-bottom: 1.5rem;">
+        <div>
+          <h1 style="font-size: 3.5rem; font-weight: 800; margin: 0 0 1rem; line-height: 1.1; letter-spacing: -0.02em;">Neïel Altmann</h1>
+          <p style="font-size: 1.5rem; color: var(--text-gray); margin-bottom: 2rem; line-height: 1.5;">Senior System Engineer & Junior Software Developer</p>
+          <p style="font-size: 1rem; color: var(--text-light); margin-bottom: 2rem; line-height: 1.6;">Paramaribo, Suriname</p>
+          <div class="flex gap-4" style="flex-wrap: wrap; margin-bottom: 3rem;">
             <a href="work.html" class="btn btn-primary" data-lang="viewWork">Bekijk mijn werk</a>
             <a href="about.html" class="btn btn-secondary">Meer over mij</a>
           </div>
-          <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
-            <div style="text-align: center;">
-              <strong style="font-size: 1.5rem; color: var(--primary-blue);">4+</strong>
-              <p style="font-size: 0.875rem; color: var(--text-light);">Jaar ervaring</p>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+            <div>
+              <strong style="font-size: 2rem; color: var(--primary-blue); font-weight: 800;">4+</strong>
+              <p style="font-size: 0.875rem; color: var(--text-gray); margin-top: 0.25rem;">Jaar ervaring</p>
             </div>
-            <div style="text-align: center;">
-              <strong style="font-size: 1.5rem; color: var(--primary-blue);">50+</strong>
-              <p style="font-size: 0.875rem; color: var(--text-light);">Projecten</p>
+            <div>
+              <strong style="font-size: 2rem; color: var(--primary-blue); font-weight: 800;">50+</strong>
+              <p style="font-size: 0.875rem; color: var(--text-gray); margin-top: 0.25rem;">Projecten</p>
             </div>
-            <div style="text-align: center;">
-              <strong style="font-size: 1.5rem; color: var(--primary-blue);">CCNA</strong>
-              <p style="font-size: 0.875rem; color: var(--text-light);">Gecertificeerd</p>
+            <div>
+              <strong style="font-size: 2rem; color: var(--primary-blue); font-weight: 800;">CCNA</strong>
+              <p style="font-size: 0.875rem; color: var(--text-gray); margin-top: 0.25rem;">Gecertificeerd</p>
             </div>
           </div>
+        </div>
+        <!-- Photo -->
+        <div style="display: flex; justify-content: center;">
+          <img src="img/me.jpg" alt="Neïel Altmann" class="hero-photo" style="width: 100%; max-width: 400px; height: auto;">
         </div>
       </div>
     </div>
   </section>
+
+  <style>
+    @media (max-width: 768px) {
+      .hero > .container > div {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem !important;
+      }
+      
+      .hero > .container > div > div:first-child > div:last-child {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1rem !important;
+      }
+      
+      .hero > .container > div > div:first-child > div:last-child > div > strong {
+        font-size: 1.5rem !important;
+      }
+      
+      .hero-photo {
+        max-width: 280px !important;
+        margin: 0 auto;
+      }
+    }
+  </style>
 
   <!-- About Section -->
   <section class="section">
@@ -79,7 +111,7 @@
           camera (NVR) installaties, hardware/software reparaties en website/applicatie ontwikkeling.
         </p>
         <div class="card" style="margin-top: 2rem;">
-          <h4 style="margin-bottom: 1rem; text-align: center;">🎓 Opleiding & Certificaten</h4>
+          <h4 style="margin-bottom: 1rem; text-align: center;">Opleiding & Certificaten</h4>
           <div class="grid grid-3" style="gap: 1rem;">
             <div style="text-align: center;">
               <strong>Natin</strong><br>

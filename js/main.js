@@ -2,11 +2,30 @@
 // Translations are now handled by translations.js
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Mobile menu toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+    
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  }
+  
   // Active navigation link highlighting
   const currentPage = window.location.pathname.split('/').pop();
-  const navLinks = document.querySelectorAll('.nav-links a');
+  const allNavLinks = document.querySelectorAll('.nav-links a');
   
-  navLinks.forEach(link => {
+  allNavLinks.forEach(link => {
     const linkPage = link.getAttribute('href');
     if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
       link.classList.add('active');
