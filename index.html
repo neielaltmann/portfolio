@@ -20,7 +20,7 @@
         <li><a href="index.html" class="active" data-lang="home">Home</a></li>
         <li><a href="about.html">Over Mij</a></li>
         <li><a href="work.html" data-lang="work">Werk</a></li>
-        <li><a href="jinet.html">Jinet Solutions</a></li>
+        <li><a href="jinet.html">JiNet Solutions</a></li>
         <li><a href="networking.html">Netwerken</a></li>
         <li><a href="software.html">Software</a></li>
         <li><a href="blog.html" data-lang="blog">Blog</a></li>
@@ -90,21 +90,32 @@
         max-width: 280px !important;
         margin: 0 auto;
       }
+      
+      .hero > .container > div > div:first-child > .flex {
+        justify-content: center !important;
+        flex-wrap: nowrap !important;
+        gap: 0.5rem !important;
+      }
+      
+      .hero > .container > div > div:first-child > .flex .btn {
+        padding: 0.75rem 1rem !important;
+        font-size: 0.875rem !important;
+      }
     }
   </style>
 
   <!-- About Section -->
-  <section class="section">
+  <section class="section" style="padding: 3rem 0;">
     <div class="container">
       <h2 class="section-title" data-lang="about">Over mij</h2>
       <div style="max-width: 800px; margin: 0 auto;">
         <p class="card-text" style="font-size: 1.1rem; margin-bottom: 1rem; text-align: center;">
           Ik ben een <strong>Senior System Engineer</strong> en <strong>Junior Software Developer</strong> gevestigd in Paramaribo, Suriname. 
-          Ik specialiseer in het opzetten, uitbreiden, overnemen en onderhouden van netwerken.
+          Ik ben gespecialiseerd in opzetten, overnemen en onderhouden van netwerken, maar ik ben ook ervaren in het bouwen van websites, webapps, mobile apps, en windows apps.
         </p>
         <p class="card-text" style="margin-bottom: 1rem; text-align: center;">
           Bij <strong>ET-IT Consultancy</strong> werk ik als Senior System Engineer sinds oktober 2025. 
-          Daarnaast heb ik mijn eigen bedrijf <strong>Jinet Solutions</strong> als bijbaan naast mijn studie.
+          Daarnaast heb ik mijn eigen bedrijf <strong>JiNet Solutions</strong> als bijbaan naast mijn studie.
         </p>
         <p class="card-text" style="margin-bottom: 2rem; text-align: center;">
           Ik heb ervaring met firewalls, Windows servers, Hypervisors, VPN-oplossingen, 
@@ -132,10 +143,10 @@
   </section>
 
   <!-- Featured Projects Section -->
-  <section class="section" style="background: var(--bg-light);">
+  <section class="section" style="background: var(--bg-light); padding: 3rem 0;">
     <div class="container">
-      <h2 class="section-title" data-lang="featuredWork">Uitgelicht werk</h2>
-      <p class="section-subtitle" data-lang="featuredDesc">Een selectie van mijn recente projecten en expertise</p>
+      <h2 class="section-title" data-lang="featuredWork">Ervaring</h2>
+      <p class="section-subtitle" data-lang="featuredDesc">Mijn professionele ervaring en expertise</p>
       
       <div class="grid grid-3">
         <div class="card">
@@ -147,19 +158,48 @@
           <p class="card-text">Ontwikkeling van websites en applicaties. Stage bij Datasur als Junior Software Developer.</p>
         </div>
         <div class="card">
-          <h3 class="card-title">Jinet Solutions</h3>
+          <h3 class="card-title">JiNet Solutions</h3>
           <p class="card-text">Mijn eigen bedrijf voor IT-diensten: hardware/software reparaties, camera installaties en technische support.</p>
         </div>
       </div>
       
       <div class="flex justify-center" style="margin-top: 2rem;">
-        <a href="work.html" class="btn btn-primary" data-lang="viewAllWork">Bekijk al mijn werk</a>
+        <a href="about.html" class="btn btn-primary">Meer over mijn ervaring</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Uitgelicht Werk Section -->
+  <section class="section" style="padding: 3rem 0;">
+    <div class="container">
+      <h2 class="section-title">Uitgelicht Werk</h2>
+      <p class="section-subtitle">Mijn belangrijkste projecten en creaties</p>
+      
+      <div class="grid grid-3">
+        <div class="card" style="display: flex; flex-direction: column;">
+          <div style="height: 200px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📱</div>
+          <h3 class="card-title">Ji Point of Sale</h3>
+          <p class="card-text" style="flex-grow: 1;">Gratis Point of Sale app voor kleine en grote ondernemingen. Cross-platform oplossing voor voorraadbeheer, offertes en verkoop.</p>
+          <a href="https://jipos.vercel.app" target="_blank" class="btn btn-primary" style="margin-top: 1rem; text-align: center;">jipos.vercel.app</a>
+        </div>
+        <div class="card" style="display: flex; flex-direction: column;">
+          <div style="height: 200px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🔧</div>
+          <h3 class="card-title">Networking Project</h3>
+          <p class="card-text" style="flex-grow: 1;">Access Point installatie voor ET-IT Consultancy klant. Professionele netwerkimplementatie op locatie.</p>
+          <span style="display: inline-block; margin-top: 1rem; color: var(--primary-blue); font-weight: 600;">ET-IT Consultancy</span>
+        </div>
+        <div class="card" style="display: flex; flex-direction: column;">
+          <div style="height: 200px; background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🌡️</div>
+          <h3 class="card-title">FrostSense</h3>
+          <p class="card-text" style="flex-grow: 1;">Arduino ESP32 temperatuur meter voor koelcellen. Voorkomt bederving van producten en voldoet aan certificeringen.</p>
+          <span style="display: inline-block; margin-top: 1rem; color: var(--accent-teal); font-weight: 600;">IoT Project</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section class="section">
+  <section class="section" style="padding: 3rem 0;">
     <div class="container">
       <h2 class="section-title" data-lang="skills">Vaardigheden</h2>
       <p class="section-subtitle" data-lang="skillsDesc">Technologieën en tools waar ik mee werk</p>
@@ -167,7 +207,7 @@
       <div class="grid grid-4">
         <div class="card">
           <h3 class="card-title">Netwerk Engineering</h3>
-          <p class="card-text">CCNA, Firewalls, VPN, TCP/IP</p>
+          <p class="card-text">CCNA, Firewalls, VPN, TCP/IP, VoIP, Network Security, DNS</p>
         </div>
         <div class="card">
           <h3 class="card-title">System Admin</h3>
@@ -175,11 +215,11 @@
         </div>
         <div class="card">
           <h3 class="card-title">Web Development</h3>
-          <p class="card-text">HTML, CSS, JavaScript, React</p>
+          <p class="card-text">HTML, CSS, JavaScript, PHP, Bootstrap, Laravel, Python</p>
         </div>
         <div class="card">
-          <h3 class="card-title">Software</h3>
-          <p class="card-text">Office, AutoCAD, Photoshop</p>
+          <h3 class="card-title">Software Development</h3>
+          <p class="card-text">Flutter, Kotlin, C++, C#, Java, Windows Apps</p>
         </div>
       </div>
     </div>

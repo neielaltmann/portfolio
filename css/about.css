@@ -62,7 +62,7 @@
 
 .about-photo {
   width: 100%;
-  max-width: 350px;
+  max-width: 400px;
   height: auto;
   object-fit: cover;
   border-radius: 1rem;
@@ -127,8 +127,8 @@
   }
   
   .about-photo {
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 376px;
     border-radius: 1rem;
   }
 }
@@ -290,7 +290,7 @@
 /* Skills Detail */
 .skills-detail {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: 900px;
   margin: 0 auto;
