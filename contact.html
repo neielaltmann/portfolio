@@ -6,6 +6,7 @@
   <title>Contact & Socials - Neïel Altmann</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/parallax-3d.css">
   <style>
     @media (max-width: 768px) {
       .section > .container > div[style*="grid-template-columns: 1fr 1fr"] {
@@ -16,7 +17,16 @@
   </style>
 </head>
 <body>
-  <nav class="navbar">
+  <!-- Scroll Progress -->
+  <div class="scroll-progress"></div>
+
+  <!-- Floating Ambient Background -->
+  <div class="floating-elements-container" style="position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;">
+    <div class="floating-element floating-orb orb-blue animate-float float-delay-1" style="width: 350px; height: 350px; top: 20%; left: -8%;" data-float-parallax="0.015"></div>
+    <div class="floating-element floating-orb orb-teal animate-float-slow float-delay-2" style="width: 300px; height: 300px; top: 60%; right: -3%;" data-float-parallax="0.02"></div>
+  </div>
+
+  <nav class="navbar navbar-3d">
     <div class="container nav-container">
       <a href="index.html" class="logo">Neïel Altmann</a>
       <button class="hamburger" aria-label="Toggle menu">
@@ -37,28 +47,28 @@
     </div>
   </nav>
 
-  <section class="section">
+  <section class="section" style="position: relative; z-index: 1;">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-subtitle">Laten we samenwerken</p>
+      <h2 class="section-title reveal-element" data-reveal>Contact</h2>
+      <p class="section-subtitle reveal-element" data-reveal>Laten we samenwerken</p>
       
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1000px; margin: 0 auto;">
+      <div class="mouse-parallax-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1000px; margin: 0 auto;">
         <!-- Left Column - Socials -->
-        <div>
+        <div class="reveal-element" data-reveal>
           <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem; font-weight: 700;">Social Media</h3>
           
           <div style="margin-bottom: 2rem;">
             <h4 style="color: var(--primary-blue); margin-bottom: 1rem; font-weight: 600;">Persoonlijk</h4>
-            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-              <a href="https://www.linkedin.com/in/neielaltmann/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
+            <div class="stagger-container" style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="https://www.linkedin.com/in/neielaltmann/" target="_blank" class="tilt-card reveal-element" data-reveal data-tilt style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
                 <span style="font-weight: 600; color: var(--text-dark);">LinkedIn</span>
                 <span style="color: var(--text-gray); font-size: 0.9rem;">Neïel Altmann</span>
               </a>
-              <a href="https://www.facebook.com/neielaltmann/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
+              <a href="https://www.facebook.com/neielaltmann/" target="_blank" class="tilt-card reveal-element" data-reveal data-tilt style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
                 <span style="font-weight: 600; color: var(--text-dark);">Facebook</span>
                 <span style="color: var(--text-gray); font-size: 0.9rem;">Neïel Altmann</span>
               </a>
-              <a href="https://wa.me/5971234567" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
+              <a href="https://wa.me/5971234567" target="_blank" class="tilt-card reveal-element" data-reveal data-tilt style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
                 <span style="font-weight: 600; color: var(--text-dark);">WhatsApp</span>
                 <span style="color: var(--text-gray); font-size: 0.9rem;">+597 123 4567</span>
               </a>
@@ -67,20 +77,20 @@
 
           <div>
             <h4 style="color: var(--primary-green); margin-bottom: 1rem; font-weight: 600;">JiNet Solutions</h4>
-            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-              <a href="https://www.linkedin.com/company/jinet-solutions/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
+            <div class="stagger-container" style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="https://www.linkedin.com/company/jinet-solutions/" target="_blank" class="tilt-card reveal-element" data-reveal data-tilt style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
                 <span style="font-weight: 600; color: var(--text-dark);">LinkedIn</span>
                 <span style="color: var(--text-gray); font-size: 0.9rem;">JiNet Solutions</span>
               </a>
-              <a href="https://www.facebook.com/jinetsolutions/" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
+              <a href="https://www.facebook.com/jinetsolutions/" target="_blank" class="tilt-card reveal-element" data-reveal data-tilt style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
                 <span style="font-weight: 600; color: var(--text-dark);">Facebook</span>
                 <span style="color: var(--text-gray); font-size: 0.9rem;">JiNet Solutions</span>
               </a>
-              <a href="https://www.tiktok.com/@jinetsolutions" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
+              <a href="https://www.tiktok.com/@jinetsolutions" target="_blank" class="tilt-card reveal-element" data-reveal data-tilt style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
                 <span style="font-weight: 600; color: var(--text-dark);">TikTok</span>
                 <span style="color: var(--text-gray); font-size: 0.9rem;">@jinetsolutions</span>
               </a>
-              <a href="https://wa.me/5977654321" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
+              <a href="https://wa.me/5977654321" target="_blank" class="tilt-card reveal-element" data-reveal data-tilt style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; padding: 1rem; background: white; border: 1px solid var(--border); border-radius: 0.5rem; transition: all 0.2s ease;">
                 <span style="font-weight: 600; color: var(--text-dark);">WhatsApp Business</span>
                 <span style="color: var(--text-gray); font-size: 0.9rem;">+597 765 4321</span>
               </a>
@@ -89,30 +99,30 @@
         </div>
 
         <!-- Right Column - Email & Location -->
-        <div>
-          <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem; font-weight: 700;">Email</h3>
+        <div class="reveal-element" data-reveal>
+          <h3 style="margin-bottom: 1rem; font-size: 1.5rem; font-weight: 700;">Email</h3>
           
-          <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem;">
-            <div style="padding: 1.25rem; background: var(--bg-light); border-radius: 0.5rem; border-left: 4px solid var(--primary-blue);">
+          <div class="stagger-container" style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem;">
+            <div class="tilt-card reveal-element" data-reveal data-tilt style="padding: 1.25rem; background: var(--bg-light); border-radius: 0.5rem; border-left: 4px solid var(--primary-blue);">
               <strong style="display: block; margin-bottom: 0.25rem; color: var(--text-dark);">Persoonlijk</strong>
               <a href="mailto:neiel.altmann@email.com" style="color: var(--primary-blue); text-decoration: none;">neiel.altmann@email.com</a>
             </div>
-            <div style="padding: 1.25rem; background: var(--bg-light); border-radius: 0.5rem; border-left: 4px solid var(--primary-green);">
+            <div class="tilt-card reveal-element" data-reveal data-tilt style="padding: 1.25rem; background: var(--bg-light); border-radius: 0.5rem; border-left: 4px solid var(--primary-green);">
               <strong style="display: block; margin-bottom: 0.25rem; color: var(--text-dark);">JiNet Solutions</strong>
               <a href="mailto:info@jinetsolutions.com" style="color: var(--primary-green); text-decoration: none;">info@jinetsolutions.com</a>
             </div>
-            <div style="padding: 1.25rem; background: var(--bg-light); border-radius: 0.5rem; border-left: 4px solid var(--accent-teal);">
+            <div class="tilt-card reveal-element" data-reveal data-tilt style="padding: 1.25rem; background: var(--bg-light); border-radius: 0.5rem; border-left: 4px solid var(--accent-teal);">
               <strong style="display: block; margin-bottom: 0.25rem; color: var(--text-dark);">ET-IT Consultancy</strong>
               <a href="mailto:n.altmann@et-it.com" style="color: var(--accent-teal); text-decoration: none;">n.altmann@et-it.com</a>
             </div>
-            <div style="padding: 1.25rem; background: var(--bg-light); border-radius: 0.5rem; border-left: 4px solid var(--text-gray);">
+            <div class="tilt-card reveal-element" data-reveal data-tilt style="padding: 1.25rem; background: var(--bg-light); border-radius: 0.5rem; border-left: 4px solid var(--text-gray);">
               <strong style="display: block; margin-bottom: 0.25rem; color: var(--text-dark);">Stage/Datasur</strong>
               <a href="mailto:neiel@datasur.sr" style="color: var(--text-gray); text-decoration: none;">neiel@datasur.sr</a>
             </div>
           </div>
 
-          <h3 style="margin-bottom: 1rem; font-size: 1.5rem; font-weight: 700;">Locatie</h3>
-          <div style="padding: 2rem; background: var(--primary-blue); color: white; border-radius: 0.75rem; text-align: center;">
+          <h3 class="reveal-element" style="margin-bottom: 1rem; font-size: 1.5rem; font-weight: 700;" data-reveal>Locatie</h3>
+          <div class="tilt-card reveal-element" data-reveal data-tilt style="padding: 2rem; background: var(--primary-blue); color: white; border-radius: 0.75rem; text-align: center;">
             <p style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Paramaribo, Suriname</p>
             <p style="opacity: 0.9;">Beschikbaar voor remote werk en projecten</p>
           </div>
@@ -135,5 +145,6 @@
 
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/parallax-3d.js"></script>
 </body>
 </html>

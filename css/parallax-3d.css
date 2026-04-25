@@ -1,0 +1,484 @@
+/* ============================================
+   CLEAN SCROLL-FOCUSED PARALLAX SYSTEM
+   Subtle interactions, dramatic scroll transitions
+   Light theme preserved
+   ============================================ */
+
+/* ============================================
+   CSS CUSTOM PROPERTIES
+   ============================================ */
+:root {
+  /* Scroll speeds - slower = more parallax */
+  --scroll-slow: 0.3;
+  --scroll-medium: 0.5;
+  --scroll-fast: 0.8;
+  
+  /* Subtle easing */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  
+  /* Animation timing */
+  --duration-fast: 200ms;
+  --duration-normal: 400ms;
+  --duration-slow: 800ms;
+  
+  /* Minimal tilt */
+  --tilt-max: 5deg;
+}
+
+/* ============================================
+   SCROLL PARALLAX LAYERS
+   ============================================ */
+.scroll-parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-bg-layer {
+  position: absolute;
+  inset: -20%;
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+.parallax-bg-slow {
+  transform: translateY(calc(var(--scroll-y) * var(--scroll-slow) * -1px));
+}
+
+.parallax-bg-medium {
+  transform: translateY(calc(var(--scroll-y) * var(--scroll-medium) * -1px));
+}
+
+.parallax-bg-fast {
+  transform: translateY(calc(var(--scroll-y) * var(--scroll-fast) * -1px));
+}
+
+/* ============================================
+   MOUSE PARALLAX - VERY SUBTLE
+   ============================================ */
+.mouse-parallax-container {
+  will-change: transform;
+}
+
+.mouse-parallax-item {
+  transition: transform var(--duration-slow) var(--ease-smooth);
+  will-change: transform;
+}
+
+/* ============================================
+   FLOATING AMBIENT ELEMENTS - MORE VISIBLE
+   ============================================ */
+.floating-element {
+  position: fixed;
+  pointer-events: none;
+  will-change: transform;
+  z-index: 0;
+}
+
+.floating-orb {
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.6;
+}
+
+.orb-blue {
+  background: radial-gradient(circle at 30% 30%, var(--primary-blue) 0%, transparent 60%);
+}
+
+.orb-green {
+  background: radial-gradient(circle at 30% 30%, var(--primary-green) 0%, transparent 60%);
+}
+
+.orb-teal {
+  background: radial-gradient(circle at 30% 30%, var(--accent-teal) 0%, transparent 60%);
+}
+
+/* Slow ambient drift */
+@keyframes drift {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1); 
+  }
+  25% { 
+    transform: translate(30px, -30px) scale(1.05); 
+  }
+  50% { 
+    transform: translate(-20px, 20px) scale(0.95); 
+  }
+  75% { 
+    transform: translate(20px, 10px) scale(1.02); 
+  }
+}
+
+.animate-float {
+  animation: drift 25s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: drift 35s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: drift 30s ease-in-out infinite, pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.7; }
+}
+
+.float-delay-1 { animation-delay: 0s; }
+.float-delay-2 { animation-delay: -8s; }
+.float-delay-3 { animation-delay: -16s; }
+.float-delay-4 { animation-delay: -4s; }
+
+/* ============================================
+   SUBTLE 3D TILT - MINIMAL
+   ============================================ */
+.tilt-card {
+  transition: transform var(--duration-fast) var(--ease-smooth),
+              box-shadow var(--duration-fast) var(--ease-smooth);
+  will-change: transform;
+}
+
+.tilt-card:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+}
+
+.tilt-card-content {
+  transform: translateZ(10px);
+}
+
+.tilt-card-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--duration-fast) var(--ease-smooth);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.tilt-card:hover .tilt-card-shine {
+  opacity: 0.5;
+}
+
+/* ============================================
+   SCROLL REVEAL - DRAMATIC BUT CLEAN
+   ============================================ */
+.reveal-element {
+  opacity: 0.2;
+  transform: translateY(60px) scale(0.95);
+  transition: opacity var(--duration-slow) var(--ease-out),
+              transform var(--duration-slow) var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.reveal-element.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Directional reveals */
+.reveal-left {
+  transform: translateX(-80px);
+}
+
+.reveal-left.revealed {
+  transform: translateX(0);
+}
+
+.reveal-right {
+  transform: translateX(80px);
+}
+
+.reveal-right.revealed {
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  transform: scale(0.85);
+  opacity: 0;
+}
+
+.reveal-scale.revealed {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* ============================================
+   STAGGER DELAYS - SMOOTH CASCADE
+   ============================================ */
+.stagger-container .reveal-element:nth-child(1) { transition-delay: 0ms; }
+.stagger-container .reveal-element:nth-child(2) { transition-delay: 100ms; }
+.stagger-container .reveal-element:nth-child(3) { transition-delay: 200ms; }
+.stagger-container .reveal-element:nth-child(4) { transition-delay: 300ms; }
+.stagger-container .reveal-element:nth-child(5) { transition-delay: 400ms; }
+.stagger-container .reveal-element:nth-child(6) { transition-delay: 500ms; }
+
+/* ============================================
+   HERO SECTION - SUBTLE DEPTH
+   ============================================ */
+.hero-3d {
+  position: relative;
+}
+
+.hero-content-3d {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-photo-3d {
+  transition: transform var(--duration-normal) var(--ease-smooth);
+}
+
+.hero-photo-3d:hover {
+  transform: scale(1.02);
+}
+
+.hero-stats-3d {
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================================
+   BUTTONS - CLEAN HOVER
+   ============================================ */
+.btn-3d {
+  transition: transform var(--duration-fast) var(--ease-smooth),
+              box-shadow var(--duration-fast) var(--ease-smooth);
+}
+
+.btn-3d:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(59, 130, 246, 0.3);
+}
+
+.btn-3d:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ============================================
+   NAVIGATION - CLEAN SCROLL EFFECT
+   ============================================ */
+.navbar-3d {
+  transition: box-shadow var(--duration-fast) var(--ease-smooth),
+              background var(--duration-fast) var(--ease-smooth);
+}
+
+.navbar-scrolled {
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* ============================================
+   SECTION BACKGROUND TRANSITIONS
+   ============================================ */
+.section-gradient {
+  background: linear-gradient(180deg, 
+    var(--bg-white) 0%, 
+    var(--bg-light) 50%,
+    var(--bg-white) 100%
+  );
+}
+
+.section-blue-glow {
+  background: linear-gradient(180deg,
+    var(--bg-white) 0%,
+    rgba(59, 130, 246, 0.03) 50%,
+    var(--bg-white) 100%
+  );
+}
+
+.section-green-glow {
+  background: linear-gradient(180deg,
+    var(--bg-white) 0%,
+    rgba(16, 185, 129, 0.03) 50%,
+    var(--bg-white) 100%
+  );
+}
+
+/* Morphing shapes for sections */
+.morph-blob {
+  position: absolute;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 15s ease-in-out infinite;
+  opacity: 0.4;
+  filter: blur(60px);
+}
+
+@keyframes morph {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  50% { border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; }
+  75% { border-radius: 60% 40% 60% 30% / 70% 30% 50% 60%; }
+}
+
+/* ============================================
+   SCROLL PROGRESS - GRADIENT BAR
+   ============================================ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    var(--primary-blue) 0%, 
+    var(--accent-teal) 50%, 
+    var(--primary-green) 100%
+  );
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: 10000;
+  transition: transform 0.1s linear;
+}
+
+/* ============================================
+   PROJECT CARDS - CLEAN LIFT
+   ============================================ */
+.project-card-3d {
+  transition: transform var(--duration-fast) var(--ease-smooth),
+              box-shadow var(--duration-fast) var(--ease-smooth);
+}
+
+.project-card-3d:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card-image {
+  transition: transform var(--duration-fast) var(--ease-smooth);
+}
+
+.project-card-3d:hover .project-card-image {
+  transform: scale(1.03);
+}
+
+/* ============================================
+   TEXT REVEAL ON SCROLL
+   ============================================ */
+.text-reveal {
+  overflow: hidden;
+}
+
+.text-reveal-inner {
+  display: inline-block;
+  transform: translateY(100%);
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.text-reveal.revealed .text-reveal-inner {
+  transform: translateY(0);
+}
+
+/* Character stagger for headings */
+.char-reveal .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s var(--ease-out),
+              transform 0.4s var(--ease-out);
+}
+
+.char-reveal.revealed .char {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+/* ============================================
+   MAGNETIC BUTTON - SUBTLE
+   ============================================ */
+.magnetic-btn {
+  transition: transform var(--duration-fast) var(--ease-smooth);
+}
+
+.magnetic-btn:hover {
+  transform: translateY(-1px);
+}
+
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+@media (max-width: 768px) {
+  .floating-orb {
+    opacity: 0.3;
+    filter: blur(40px);
+  }
+  
+  .reveal-element {
+    transform: translateY(40px);
+  }
+  
+  .tilt-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .floating-element {
+    display: none;
+  }
+  
+  .reveal-element {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+
+/* ============================================
+   HOVER LIFT - MINIMAL
+   ============================================ */
+.hover-lift {
+  transition: transform var(--duration-fast) var(--ease-smooth),
+              box-shadow var(--duration-fast) var(--ease-smooth);
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   PARALLAX SECTION DIVIDERS
+   ============================================ */
+.parallax-divider {
+  height: 200px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.parallax-divider::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, 
+    var(--bg-white) 0%, 
+    transparent 50%, 
+    var(--bg-white) 100%
+  );
+}

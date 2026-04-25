@@ -5,10 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neïel Altmann - Portfolio</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/parallax-3d.css">
 </head>
 <body>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress"></div>
+
+  <!-- Floating Ambient Background - Large Visible Orbs -->
+  <div class="floating-elements-container" style="position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;">
+    <!-- Large blue orb top left -->
+    <div class="floating-element floating-orb orb-blue animate-float float-delay-1" style="width: 600px; height: 600px; top: -5%; left: -15%;"></div>
+    <!-- Medium green orb right side -->
+    <div class="floating-element floating-orb orb-green animate-float-slow float-delay-2" style="width: 500px; height: 500px; top: 40%; right: -10%;"></div>
+    <!-- Medium teal orb mid right -->
+    <div class="floating-element floating-orb orb-teal animate-float float-delay-3" style="width: 400px; height: 400px; top: 20%; right: 25%;"></div>
+    <!-- Small blue orb bottom -->
+    <div class="floating-element floating-orb orb-blue animate-pulse-glow float-delay-4" style="width: 350px; height: 350px; bottom: 10%; left: 10%;"></div>
+  </div>
+
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar navbar-3d">
     <div class="container nav-container">
       <a href="index.html" class="logo">Neïel Altmann</a>
       <button class="hamburger" aria-label="Toggle menu">
@@ -29,37 +45,51 @@
     </div>
   </nav>
 
-  <!-- Hero Section with Photo -->
-  <section class="hero" style="padding: 6rem 0;">
+  <!-- Hero Section with Photo - 3D Parallax -->
+  <section class="hero hero-3d parallax-scene" style="padding: 6rem 0; position: relative; z-index: 1;">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto;">
+      <div class="mouse-parallax-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto;">
         <!-- Info -->
-        <div>
-          <h1 style="font-size: 3.5rem; font-weight: 800; margin: 0 0 1rem; line-height: 1.1; letter-spacing: -0.02em;">Neïel Altmann</h1>
-          <p style="font-size: 1.5rem; color: var(--text-gray); margin-bottom: 2rem; line-height: 1.5;">Senior System Engineer & Junior Software Developer</p>
-          <p style="font-size: 1rem; color: var(--text-light); margin-bottom: 2rem; line-height: 1.6;">Paramaribo, Suriname</p>
-          <div class="flex gap-4" style="flex-wrap: wrap; margin-bottom: 3rem;">
-            <a href="work.html" class="btn btn-primary" data-lang="viewWork">Bekijk mijn werk</a>
-            <a href="about.html" class="btn btn-secondary">Meer over mij</a>
+        <div class="hero-content-3d reveal-element" data-reveal>
+          <div class="text-reveal revealed">
+            <h1 class="text-reveal-inner" style="font-size: 3.5rem; font-weight: 800; margin: 0 0 1rem; line-height: 1.1; letter-spacing: -0.02em;">Neïel Altmann</h1>
           </div>
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-            <div>
-              <strong style="font-size: 2rem; color: var(--primary-blue); font-weight: 800;">4+</strong>
-              <p style="font-size: 0.875rem; color: var(--text-gray); margin-top: 0.25rem;">Jaar ervaring</p>
+          <p class="reveal-element" style="font-size: 1.5rem; color: var(--text-gray); margin-bottom: 2rem; line-height: 1.5;" data-reveal>Senior System Engineer & Junior Software Developer</p>
+          <p class="reveal-element" style="font-size: 1rem; color: var(--text-light); margin-bottom: 2rem; line-height: 1.6;" data-reveal>Paramaribo, Suriname</p>
+          <div class="flex gap-4 reveal-element" style="flex-wrap: wrap; margin-bottom: 3rem;" data-reveal>
+            <a href="work.html" class="btn btn-primary btn-3d magnetic-btn" data-lang="viewWork">Bekijk mijn werk</a>
+            <a href="about.html" class="btn btn-secondary btn-3d magnetic-btn">Meer over mij</a>
+          </div>
+          <div class="hero-stats-3d reveal-element stagger-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;" data-reveal>
+            <div class="tilt-card" data-tilt style="text-align: center; padding: 1rem; border-radius: 0.75rem; cursor: default;">
+              <div class="tilt-card-shine"></div>
+              <div class="tilt-card-content">
+                <strong style="font-size: 2rem; color: var(--primary-blue); font-weight: 800;">4+</strong>
+                <p style="font-size: 0.875rem; color: var(--text-gray); margin-top: 0.25rem;">Jaar ervaring</p>
+              </div>
             </div>
-            <div>
-              <strong style="font-size: 2rem; color: var(--primary-blue); font-weight: 800;">50+</strong>
-              <p style="font-size: 0.875rem; color: var(--text-gray); margin-top: 0.25rem;">Projecten</p>
+            <div class="tilt-card" data-tilt style="text-align: center; padding: 1rem; border-radius: 0.75rem; cursor: default;">
+              <div class="tilt-card-shine"></div>
+              <div class="tilt-card-content">
+                <strong style="font-size: 2rem; color: var(--primary-blue); font-weight: 800;">50+</strong>
+                <p style="font-size: 0.875rem; color: var(--text-gray); margin-top: 0.25rem;">Projecten</p>
+              </div>
             </div>
-            <div>
-              <strong style="font-size: 2rem; color: var(--primary-blue); font-weight: 800;">CCNA</strong>
-              <p style="font-size: 0.875rem; color: var(--text-gray); margin-top: 0.25rem;">Gecertificeerd</p>
+            <div class="tilt-card" data-tilt style="text-align: center; padding: 1rem; border-radius: 0.75rem; cursor: default;">
+              <div class="tilt-card-shine"></div>
+              <div class="tilt-card-content">
+                <strong style="font-size: 2rem; color: var(--primary-blue); font-weight: 800;">CCNA</strong>
+                <p style="font-size: 0.875rem; color: var(--text-gray); margin-top: 0.25rem;">Gecertificeerd</p>
+              </div>
             </div>
           </div>
         </div>
         <!-- Photo -->
-        <div style="display: flex; justify-content: center;">
-          <img src="img/me.jpg" alt="Neïel Altmann" class="hero-photo" style="width: 100%; max-width: 400px; height: auto;">
+        <div class="reveal-element reveal-scale" style="display: flex; justify-content: center;" data-reveal>
+          <div class="hero-photo-3d tilt-card" data-tilt data-parallax="0.02" style="position: relative;">
+            <div class="tilt-card-shine" style="border-radius: 1rem;"></div>
+            <img src="img/me.jpg" alt="Neïel Altmann" class="hero-photo" style="width: 100%; max-width: 400px; height: auto; display: block;">
+          </div>
         </div>
       </div>
     </div>
@@ -105,36 +135,39 @@
   </style>
 
   <!-- About Section -->
-  <section class="section" style="padding: 3rem 0;">
+  <section class="section section-blue-glow" style="padding: 3rem 0; position: relative; z-index: 1;">
     <div class="container">
-      <h2 class="section-title" data-lang="about">Over mij</h2>
+      <h2 class="section-title reveal-element" data-lang="about" data-reveal>Over mij</h2>
       <div style="max-width: 800px; margin: 0 auto;">
-        <p class="card-text" style="font-size: 1.1rem; margin-bottom: 1rem; text-align: center;">
+        <p class="card-text reveal-element" style="font-size: 1.1rem; margin-bottom: 1rem; text-align: center;" data-reveal>
           Ik ben een <strong>Senior System Engineer</strong> en <strong>Junior Software Developer</strong> gevestigd in Paramaribo, Suriname. 
           Ik ben gespecialiseerd in opzetten, overnemen en onderhouden van netwerken, maar ik ben ook ervaren in het bouwen van websites, webapps, mobile apps, en windows apps.
         </p>
-        <p class="card-text" style="margin-bottom: 1rem; text-align: center;">
+        <p class="card-text reveal-element" style="margin-bottom: 1rem; text-align: center;" data-reveal>
           Bij <strong>ET-IT Consultancy</strong> werk ik als Senior System Engineer sinds oktober 2025. 
           Daarnaast heb ik mijn eigen bedrijf <strong>JiNet Solutions</strong> als bijbaan naast mijn studie.
         </p>
-        <p class="card-text" style="margin-bottom: 2rem; text-align: center;">
+        <p class="card-text reveal-element" style="margin-bottom: 2rem; text-align: center;" data-reveal>
           Ik heb ervaring met firewalls, Windows servers, Hypervisors, VPN-oplossingen, 
           camera (NVR) installaties, hardware/software reparaties en website/applicatie ontwikkeling.
         </p>
-        <div class="card" style="margin-top: 2rem;">
-          <h4 style="margin-bottom: 1rem; text-align: center;">Opleiding & Certificaten</h4>
-          <div class="grid grid-3" style="gap: 1rem;">
-            <div style="text-align: center;">
-              <strong>Natin</strong><br>
-              <small style="color: var(--text-gray);">Software Engineering<br>2021-2025</small>
-            </div>
-            <div style="text-align: center;">
-              <strong>Unasat</strong><br>
-              <small style="color: var(--text-gray);">Bachelor of Science<br>2025-heden</small>
-            </div>
-            <div style="text-align: center;">
-              <strong>Cisco</strong><br>
-              <small style="color: var(--text-gray);">CCNA Certification<br>mei 2023</small>
+        <div class="card reveal-element tilt-card stagger-container" style="margin-top: 2rem; position: relative;" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h4 style="margin-bottom: 1rem; text-align: center;">Opleiding & Certificaten</h4>
+            <div class="grid grid-3" style="gap: 1rem;">
+              <div class="reveal-element" style="text-align: center;" data-reveal>
+                <strong>Natin</strong><br>
+                <small style="color: var(--text-gray);">Software Engineering<br>2021-2025</small>
+              </div>
+              <div class="reveal-element" style="text-align: center;" data-reveal>
+                <strong>Unasat</strong><br>
+                <small style="color: var(--text-gray);">Bachelor of Science<br>2025-heden</small>
+              </div>
+              <div class="reveal-element" style="text-align: center;" data-reveal>
+                <strong>Cisco</strong><br>
+                <small style="color: var(--text-gray);">CCNA Certification<br>mei 2023</small>
+              </div>
             </div>
           </div>
         </div>
@@ -143,83 +176,113 @@
   </section>
 
   <!-- Featured Projects Section -->
-  <section class="section" style="background: var(--bg-light); padding: 3rem 0;">
+  <section class="section section-gradient" style="padding: 3rem 0; position: relative; z-index: 1;">
     <div class="container">
-      <h2 class="section-title" data-lang="featuredWork">Ervaring</h2>
-      <p class="section-subtitle" data-lang="featuredDesc">Mijn professionele ervaring en expertise</p>
+      <h2 class="section-title reveal-element" data-lang="featuredWork" data-reveal>Ervaring</h2>
+      <p class="section-subtitle reveal-element" data-lang="featuredDesc" data-reveal>Mijn professionele ervaring en expertise</p>
       
-      <div class="grid grid-3">
-        <div class="card">
-          <h3 class="card-title">Netwerk Engineering</h3>
-          <p class="card-text">Opzetten en onderhouden van netwerken, firewalls, Windows servers, Hypervisors en VPN-oplossingen voor bedrijven.</p>
+      <div class="grid grid-3 stagger-container">
+        <div class="card reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h3 class="card-title">Netwerk Engineering</h3>
+            <p class="card-text">Opzetten en onderhouden van netwerken, firewalls, Windows servers, Hypervisors en VPN-oplossingen voor bedrijven.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3 class="card-title">Software Development</h3>
-          <p class="card-text">Ontwikkeling van websites en applicaties. Stage bij Datasur als Junior Software Developer.</p>
+        <div class="card reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h3 class="card-title">Software Development</h3>
+            <p class="card-text">Ontwikkeling van websites en applicaties. Stage bij Datasur als Junior Software Developer.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3 class="card-title">JiNet Solutions</h3>
-          <p class="card-text">Mijn eigen bedrijf voor IT-diensten: hardware/software reparaties, camera installaties en technische support.</p>
+        <div class="card reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h3 class="card-title">JiNet Solutions</h3>
+            <p class="card-text">Mijn eigen bedrijf voor IT-diensten: hardware/software reparaties, camera installaties en technische support.</p>
+          </div>
         </div>
       </div>
       
-      <div class="flex justify-center" style="margin-top: 2rem;">
-        <a href="about.html" class="btn btn-primary">Meer over mijn ervaring</a>
+      <div class="flex justify-center reveal-element" style="margin-top: 2rem;" data-reveal>
+        <a href="about.html" class="btn btn-primary btn-3d magnetic-btn">Meer over mijn ervaring</a>
       </div>
     </div>
   </section>
 
   <!-- Uitgelicht Werk Section -->
-  <section class="section" style="padding: 3rem 0;">
+  <section class="section section-green-glow" style="padding: 3rem 0; position: relative; z-index: 1;">
     <div class="container">
-      <h2 class="section-title">Uitgelicht Werk</h2>
-      <p class="section-subtitle">Mijn belangrijkste projecten en creaties</p>
+      <h2 class="section-title reveal-element" data-reveal>Uitgelicht Werk</h2>
+      <p class="section-subtitle reveal-element" data-reveal>Mijn belangrijkste projecten en creaties</p>
       
-      <div class="grid grid-3">
-        <div class="card" style="display: flex; flex-direction: column;">
-          <div style="height: 200px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📱</div>
-          <h3 class="card-title">Ji Point of Sale</h3>
-          <p class="card-text" style="flex-grow: 1;">Gratis Point of Sale app voor kleine en grote ondernemingen. Cross-platform oplossing voor voorraadbeheer, offertes en verkoop.</p>
-          <a href="https://jipos.vercel.app" target="_blank" class="btn btn-primary" style="margin-top: 1rem; text-align: center;">jipos.vercel.app</a>
+      <div class="grid grid-3 stagger-container">
+        <div class="card reveal-element tilt-card hover-lift project-card-3d" style="display: flex; flex-direction: column;" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content" style="display: flex; flex-direction: column; flex-grow: 1;">
+            <div class="project-card-image" style="height: 200px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📱</div>
+            <h3 class="card-title">Ji Point of Sale</h3>
+            <p class="card-text" style="flex-grow: 1;">Gratis Point of Sale app voor kleine en grote ondernemingen. Cross-platform oplossing voor voorraadbeheer, offertes en verkoop.</p>
+            <a href="https://jipos.vercel.app" target="_blank" class="btn btn-primary btn-3d magnetic-btn" style="margin-top: 1rem; text-align: center;">jipos.vercel.app</a>
+          </div>
         </div>
-        <div class="card" style="display: flex; flex-direction: column;">
-          <div style="height: 200px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🔧</div>
-          <h3 class="card-title">Networking Project</h3>
-          <p class="card-text" style="flex-grow: 1;">Access Point installatie voor ET-IT Consultancy klant. Professionele netwerkimplementatie op locatie.</p>
-          <span style="display: inline-block; margin-top: 1rem; color: var(--primary-blue); font-weight: 600;">ET-IT Consultancy</span>
+        <div class="card reveal-element tilt-card hover-lift project-card-3d" style="display: flex; flex-direction: column;" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content" style="display: flex; flex-direction: column; flex-grow: 1;">
+            <div class="project-card-image" style="height: 200px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🔧</div>
+            <h3 class="card-title">Networking Project</h3>
+            <p class="card-text" style="flex-grow: 1;">Access Point installatie voor ET-IT Consultancy klant. Professionele netwerkimplementatie op locatie.</p>
+            <span style="display: inline-block; margin-top: 1rem; color: var(--primary-blue); font-weight: 600;">ET-IT Consultancy</span>
+          </div>
         </div>
-        <div class="card" style="display: flex; flex-direction: column;">
-          <div style="height: 200px; background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🌡️</div>
-          <h3 class="card-title">FrostSense</h3>
-          <p class="card-text" style="flex-grow: 1;">Arduino ESP32 temperatuur meter voor koelcellen. Voorkomt bederving van producten en voldoet aan certificeringen.</p>
-          <span style="display: inline-block; margin-top: 1rem; color: var(--accent-teal); font-weight: 600;">IoT Project</span>
+        <div class="card reveal-element tilt-card hover-lift project-card-3d" style="display: flex; flex-direction: column;" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content" style="display: flex; flex-direction: column; flex-grow: 1;">
+            <div class="project-card-image" style="height: 200px; background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🌡️</div>
+            <h3 class="card-title">FrostSense</h3>
+            <p class="card-text" style="flex-grow: 1;">Arduino ESP32 temperatuur meter voor koelcellen. Voorkomt bederving van producten en voldoet aan certificeringen.</p>
+            <span style="display: inline-block; margin-top: 1rem; color: var(--accent-teal); font-weight: 600;">IoT Project</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section class="section" style="padding: 3rem 0;">
+  <section class="section section-gradient" style="padding: 3rem 0; position: relative; z-index: 1;">
     <div class="container">
-      <h2 class="section-title" data-lang="skills">Vaardigheden</h2>
-      <p class="section-subtitle" data-lang="skillsDesc">Technologieën en tools waar ik mee werk</p>
+      <h2 class="section-title reveal-element" data-lang="skills" data-reveal>Vaardigheden</h2>
+      <p class="section-subtitle reveal-element" data-lang="skillsDesc" data-reveal>Technologieën en tools waar ik mee werk</p>
       
-      <div class="grid grid-4">
-        <div class="card">
-          <h3 class="card-title">Netwerk Engineering</h3>
-          <p class="card-text">CCNA, Firewalls, VPN, TCP/IP, VoIP, Network Security, DNS</p>
+      <div class="grid grid-4 stagger-container">
+        <div class="card reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h3 class="card-title">Netwerk Engineering</h3>
+            <p class="card-text">CCNA, Firewalls, VPN, TCP/IP, VoIP, Network Security, DNS</p>
+          </div>
         </div>
-        <div class="card">
-          <h3 class="card-title">System Admin</h3>
-          <p class="card-text">Windows Server, Hypervisors, NVR</p>
+        <div class="card reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h3 class="card-title">System Admin</h3>
+            <p class="card-text">Windows Server, Hypervisors, NVR</p>
+          </div>
         </div>
-        <div class="card">
-          <h3 class="card-title">Web Development</h3>
-          <p class="card-text">HTML, CSS, JavaScript, PHP, Bootstrap, Laravel, Python</p>
+        <div class="card reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h3 class="card-title">Web Development</h3>
+            <p class="card-text">HTML, CSS, JavaScript, PHP, Bootstrap, Laravel, Python</p>
+          </div>
         </div>
-        <div class="card">
-          <h3 class="card-title">Software Development</h3>
-          <p class="card-text">Flutter, Kotlin, C++, C#, Java, Windows Apps</p>
+        <div class="card reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h3 class="card-title">Software Development</h3>
+            <p class="card-text">Flutter, Kotlin, C++, C#, Java, Windows Apps</p>
+          </div>
         </div>
       </div>
     </div>
@@ -240,5 +303,6 @@
 
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/parallax-3d.js"></script>
 </body>
 </html>

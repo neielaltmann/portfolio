@@ -6,9 +6,20 @@
   <title>Werk - Neïel Altmann</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/work.css">
+  <link rel="stylesheet" href="css/parallax-3d.css">
 </head>
 <body>
-  <nav class="navbar">
+  <!-- Scroll Progress -->
+  <div class="scroll-progress"></div>
+
+  <!-- Floating Ambient Background -->
+  <div class="floating-elements-container" style="position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;">
+    <div class="floating-element floating-orb orb-blue animate-float float-delay-1" style="width: 400px; height: 400px; top: 15%; right: -10%;" data-float-parallax="0.015"></div>
+    <div class="floating-element floating-orb orb-teal animate-float-slow float-delay-2" style="width: 350px; height: 350px; top: 50%; left: -5%;" data-float-parallax="0.02"></div>
+    <div class="floating-element floating-orb orb-green animate-pulse-glow float-delay-3" style="width: 200px; height: 200px; bottom: 30%; right: 10%; opacity: 0.3;" data-float-parallax="0.01"></div>
+  </div>
+
+  <nav class="navbar navbar-3d">
     <div class="container nav-container">
       <a href="index.html" class="logo">Neïel Altmann</a>
       <button class="hamburger" aria-label="Toggle menu">
@@ -29,86 +40,113 @@
     </div>
   </nav>
 
-  <section class="section">
+  <section class="section" style="position: relative; z-index: 1;">
     <div class="container">
-      <h2 class="section-title" data-lang="myWork">Mijn Werk</h2>
-      <p class="section-subtitle" data-lang="workDesc">Een overzicht van al mijn projecten en ervaring</p>
+      <h2 class="section-title reveal-element" data-lang="myWork" data-reveal>Mijn Werk</h2>
+      <p class="section-subtitle reveal-element" data-lang="workDesc" data-reveal>Een overzicht van al mijn projecten en ervaring</p>
       
       <!-- Networking Projects -->
-      <h3 style="text-align: center; margin: 3rem 0 2rem; color: var(--primary-blue);">Netwerk Engineering</h3>
-      <div class="grid grid-3">
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">ET-IT Consultancy</span>
-          <h3 class="card-title">Enterprise Firewall Setup</h3>
-          <p class="card-text">Opzetten en configureren van enterprise firewalls voor beveiligde netwerktoegang.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
+      <h3 class="reveal-element" style="text-align: center; margin: 3rem 0 2rem; color: var(--primary-blue);" data-reveal>Netwerk Engineering</h3>
+      <div class="grid grid-3 stagger-container">
+        <div class="card project-card reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <div class="project-image" style="height: 180px; background: linear-gradient(135deg, var(--primary-blue), #2563eb); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🛡️</div>
+            <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">ET-IT Consultancy</span>
+            <h3 class="card-title">Enterprise Firewall Setup</h3>
+            <p class="card-text">Opzetten en configureren van enterprise firewalls voor beveiligde netwerktoegang.</p>
+            <a href="#" class="btn btn-primary btn-3d magnetic-btn" data-lang="viewProject">Bekijk project</a>
+          </div>
         </div>
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">Freelance</span>
-          <h3 class="card-title">VPN Infrastructure</h3>
-          <p class="card-text">Implementatie van VPN-oplossingen voor remote werken op afstand.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
+        <div class="card project-card reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <div class="project-image" style="height: 180px; background: linear-gradient(135deg, var(--primary-green), #059669); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🔐</div>
+            <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">Freelance</span>
+            <h3 class="card-title">VPN Infrastructure</h3>
+            <p class="card-text">Implementatie van VPN-oplossingen voor remote werken op afstand.</p>
+            <a href="#" class="btn btn-primary btn-3d magnetic-btn" data-lang="viewProject">Bekijk project</a>
+          </div>
         </div>
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">JiNet Solutions</span>
-          <h3 class="card-title">Camera (NVR) Installatie</h3>
-          <p class="card-text">Installatie en configuratie van NVR camera systemen voor bedrijven.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
+        <div class="card project-card reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <div class="project-image" style="height: 180px; background: linear-gradient(135deg, var(--accent-teal), #0d9488); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📹</div>
+            <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">JiNet Solutions</span>
+            <h3 class="card-title">Camera (NVR) Installatie</h3>
+            <p class="card-text">Installatie en configuratie van NVR camera systemen voor bedrijven.</p>
+            <a href="#" class="btn btn-primary btn-3d magnetic-btn" data-lang="viewProject">Bekijk project</a>
+          </div>
         </div>
       </div>
       
       <!-- Software Development Projects -->
-      <h3 style="text-align: center; margin: 3rem 0 2rem; color: var(--primary-green);">Software Development</h3>
-      <div class="grid grid-3">
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">Datasur</span>
-          <h3 class="card-title">Stage Project</h3>
-          <p class="card-text">Software development project tijdens mijn stage bij Datasur (apr-jul 2025).</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
+      <h3 class="reveal-element" style="text-align: center; margin: 3rem 0 2rem; color: var(--primary-green);" data-reveal>Software Development</h3>
+      <div class="grid grid-3 stagger-container">
+        <div class="card project-card reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <div class="project-image" style="height: 180px; background: linear-gradient(135deg, #3b82f6, #2563eb); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">💻</div>
+            <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">Datasur</span>
+            <h3 class="card-title">Stage Project</h3>
+            <p class="card-text">Software development project tijdens mijn stage bij Datasur (apr-jul 2025).</p>
+            <a href="#" class="btn btn-primary btn-3d magnetic-btn" data-lang="viewProject">Bekijk project</a>
+          </div>
         </div>
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">JiNet Solutions</span>
-          <h3 class="card-title">Website Development</h3>
-          <p class="card-text">Ontwikkeling van websites en webapplicaties voor klanten.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
+        <div class="card project-card reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <div class="project-image" style="height: 180px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🌐</div>
+            <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">JiNet Solutions</span>
+            <h3 class="card-title">Website Development</h3>
+            <p class="card-text">Ontwikkeling van websites en webapplicaties voor klanten.</p>
+            <a href="#" class="btn btn-primary btn-3d magnetic-btn" data-lang="viewProject">Bekijk project</a>
+          </div>
         </div>
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">Personal</span>
-          <h3 class="card-title">Portfolio Website</h3>
-          <p class="card-text">Deze portfolio website gebouwd met HTML, CSS en JavaScript.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
+        <div class="card project-card reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <div class="project-image" style="height: 180px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">✨</div>
+            <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">Personal</span>
+            <h3 class="card-title">Portfolio Website</h3>
+            <p class="card-text">Deze portfolio website gebouwd met HTML, CSS en JavaScript.</p>
+            <a href="#" class="btn btn-primary btn-3d magnetic-btn" data-lang="viewProject">Bekijk project</a>
+          </div>
         </div>
       </div>
       
       <!-- JiNet Solutions Projects -->
-      <h3 style="text-align: center; margin: 3rem 0 2rem; color: var(--accent-teal);">JiNet Solutions - Mijn Bedrijf</h3>
-      <div class="grid grid-3">
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">IT Services</span>
-          <h3 class="card-title">Hardware Reparatie</h3>
-          <p class="card-text">Reparatie en upgrades van computers en laptops voor particulieren en bedrijven.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
+      <h3 class="reveal-element" style="text-align: center; margin: 3rem 0 2rem; color: var(--accent-teal);" data-reveal>JiNet Solutions - Mijn Bedrijf</h3>
+      <div class="grid grid-3 stagger-container">
+        <div class="card project-card reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <div class="project-image" style="height: 180px; background: linear-gradient(135deg, #ef4444, #dc2626); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🔧</div>
+            <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">IT Services</span>
+            <h3 class="card-title">Hardware Reparatie</h3>
+            <p class="card-text">Reparatie en upgrades van computers en laptops voor particulieren en bedrijven.</p>
+            <a href="#" class="btn btn-primary btn-3d magnetic-btn" data-lang="viewProject">Bekijk project</a>
+          </div>
         </div>
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">IT Services</span>
-          <h3 class="card-title">Software Installatie</h3>
-          <p class="card-text">Installatie van Office, AutoCAD, Photoshop en andere software.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
+        <div class="card project-card reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <div class="project-image" style="height: 180px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">⚙️</div>
+            <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">IT Services</span>
+            <h3 class="card-title">Software Installatie</h3>
+            <p class="card-text">Installatie van Office, AutoCAD, Photoshop en andere software.</p>
+            <a href="#" class="btn btn-primary btn-3d magnetic-btn" data-lang="viewProject">Bekijk project</a>
+          </div>
         </div>
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">IT Services</span>
-          <h3 class="card-title">Technische Support</h3>
-          <p class="card-text">Onderhoud en support voor IT-infrastructuren van kleine bedrijven.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
+        <div class="card project-card reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <div class="project-image" style="height: 180px; background: linear-gradient(135deg, #06b6d4, #0891b2); border-radius: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🎧</div>
+            <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">IT Services</span>
+            <h3 class="card-title">Technische Support</h3>
+            <p class="card-text">Onderhoud en support voor IT-infrastructuren van kleine bedrijven.</p>
+            <a href="#" class="btn btn-primary btn-3d magnetic-btn" data-lang="viewProject">Bekijk project</a>
+          </div>
         </div>
       </div>
     </div>
@@ -128,5 +166,6 @@
 
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/parallax-3d.js"></script>
 </body>
 </html>

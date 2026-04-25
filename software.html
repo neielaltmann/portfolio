@@ -6,9 +6,19 @@
   <title>Software Projecten - Neïel Altmann</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/software.css">
+  <link rel="stylesheet" href="css/parallax-3d.css">
 </head>
 <body>
-  <nav class="navbar">
+  <!-- Scroll Progress -->
+  <div class="scroll-progress"></div>
+
+  <!-- Floating Ambient Background -->
+  <div class="floating-elements-container" style="position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;">
+    <div class="floating-element floating-orb orb-teal animate-float float-delay-1" style="width: 400px; height: 400px; top: 10%; left: -10%;" data-float-parallax="0.015"></div>
+    <div class="floating-element floating-orb orb-green animate-float-slow float-delay-2" style="width: 350px; height: 350px; top: 50%; right: -5%;" data-float-parallax="0.025"></div>
+  </div>
+
+  <nav class="navbar navbar-3d">
     <div class="container nav-container">
       <a href="index.html" class="logo">Neïel Altmann</a>
       <button class="hamburger" aria-label="Toggle menu">
@@ -30,21 +40,27 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero hero-3d parallax-scene" style="position: relative; z-index: 1;">
     <div class="container">
-      <div style="text-align: center;">
-        <h1 style="margin-bottom: 1rem;">Software Development</h1>
-        <p style="font-size: 1.25rem; color: var(--text-gray);">Web applicaties en software oplossingen</p>
+      <div style="text-align: center;" class="reveal-element" data-reveal>
+        <h1 style="margin-bottom: 1rem;">
+          <span class="text-reveal revealed">
+            <span class="text-reveal-inner">Software Development</span>
+          </span>
+        </h1>
+        <p class="reveal-element" style="font-size: 1.25rem; color: var(--text-gray);" data-reveal>Web applicaties en software oplossingen</p>
       </div>
     </div>
   </section>
 
   <!-- Tech Stack -->
-  <section class="section">
+  <section class="section" style="position: relative; z-index: 1;">
     <div class="container">
-      <h2 class="section-title">Tech Stack</h2>
-      <div class="tech-grid">
-        <div class="tech-card">
+      <h2 class="section-title reveal-element" data-reveal>Tech Stack</h2>
+      <div class="tech-grid stagger-container">
+        <div class="tech-card reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
           <h3>Frontend</h3>
           <ul>
             <li>HTML5 & CSS3</li>
@@ -53,8 +69,11 @@
             <li>Responsive Design</li>
           </ul>
         </div>
+        </div>
         
-        <div class="tech-card">
+        <div class="tech-card reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
           <h3>Backend</h3>
           <ul>
             <li>Node.js</li>
@@ -63,8 +82,11 @@
             <li>Database Design</li>
           </ul>
         </div>
+        </div>
         
-        <div class="tech-card">
+        <div class="tech-card reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
           <h3>Tools</h3>
           <ul>
             <li>Git & GitHub</li>
@@ -78,14 +100,14 @@
   </section>
 
   <!-- Projects -->
-  <section class="section" style="background: var(--bg-light);">
+  <section class="section" style="background: var(--bg-light); position: relative; z-index: 1;">
     <div class="container">
-      <h2 class="section-title">Software Projecten</h2>
+      <h2 class="section-title reveal-element" data-reveal>Software Projecten</h2>
       
-      <div class="software-projects">
-        <div class="sw-project">
+      <div class="software-projects stagger-container">
+        <div class="sw-project reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
           <div class="project-visual">
-            <div class="placeholder-img">Portfolio Website</div>
+            <div class="placeholder-img" style="height: 200px; background: linear-gradient(135deg, var(--primary-blue), #2563eb); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">Portfolio Website</div>
           </div>
           <div class="project-details">
             <h3>Persoonlijke Portfolio</h3>
@@ -94,8 +116,8 @@
               Geen frameworks, responsive design, meertalig en snel.
             </p>
             <div class="project-links">
-              <a href="#" class="btn btn-primary">Live Demo</a>
-              <a href="#" class="btn btn-secondary">GitHub</a>
+              <a href="#" class="btn btn-primary btn-3d magnetic-btn">Live Demo</a>
+              <a href="#" class="btn btn-secondary btn-3d magnetic-btn">GitHub</a>
             </div>
             <div class="tech-used">
               <span>HTML</span>
@@ -105,9 +127,9 @@
           </div>
         </div>
         
-        <div class="sw-project">
+        <div class="sw-project reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
           <div class="project-visual">
-            <div class="placeholder-img">Stage Project</div>
+            <div class="placeholder-img" style="height: 200px; background: linear-gradient(135deg, var(--primary-green), #059669); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">Stage Project</div>
           </div>
           <div class="project-details">
             <h3>Datasur Stage Project</h3>
@@ -116,7 +138,7 @@
               Interne applicatie voor data management en rapportage.
             </p>
             <div class="project-links">
-              <span class="btn btn-secondary" style="opacity: 0.6; cursor: not-allowed;">Private</span>
+              <span class="btn btn-secondary btn-3d" style="opacity: 0.6; cursor: not-allowed;">Private</span>
             </div>
             <div class="tech-used">
               <span>JavaScript</span>
@@ -126,9 +148,9 @@
           </div>
         </div>
         
-        <div class="sw-project">
+        <div class="sw-project reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
           <div class="project-visual">
-            <div class="placeholder-img">Jinet Website</div>
+            <div class="placeholder-img" style="height: 200px; background: linear-gradient(135deg, var(--accent-teal), #0d9488); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">Jinet Website</div>
           </div>
           <div class="project-details">
             <h3>JiNet Solutions Website</h3>
@@ -137,7 +159,7 @@
               contactgegevens en een overzicht van mogelijkheden.
             </p>
             <div class="project-links">
-              <a href="jinet.html" class="btn btn-primary">Bekijken</a>
+              <a href="jinet.html" class="btn btn-primary btn-3d magnetic-btn">Bekijken</a>
             </div>
             <div class="tech-used">
               <span>HTML</span>
@@ -151,11 +173,11 @@
   </section>
 
   <!-- Learning Path -->
-  <section class="section">
+  <section class="section" style="position: relative; z-index: 1;">
     <div class="container">
-      <h2 class="section-title">Leerpad & Groei</h2>
-      <div class="learning-timeline">
-        <div class="learning-item">
+      <h2 class="section-title reveal-element" data-reveal>Leerpad & Groei</h2>
+      <div class="learning-timeline stagger-container">
+        <div class="learning-item reveal-element tilt-card hover-lift" data-reveal data-tilt>
           <div class="learning-date">2021</div>
           <div class="learning-content">
             <h4>HTML & CSS Fundamentals</h4>
@@ -163,7 +185,7 @@
           </div>
         </div>
         
-        <div class="learning-item">
+        <div class="learning-item reveal-element tilt-card hover-lift" data-reveal data-tilt>
           <div class="learning-date">2022</div>
           <div class="learning-content">
             <h4>JavaScript & Programming</h4>
@@ -171,7 +193,7 @@
           </div>
         </div>
         
-        <div class="learning-item">
+        <div class="learning-item reveal-element tilt-card hover-lift" data-reveal data-tilt>
           <div class="learning-date">2023</div>
           <div class="learning-content">
             <h4>Modern Frameworks</h4>
@@ -179,7 +201,7 @@
           </div>
         </div>
         
-        <div class="learning-item">
+        <div class="learning-item reveal-element tilt-card hover-lift" data-reveal data-tilt>
           <div class="learning-date">2024-2025</div>
           <div class="learning-content">
             <h4>Full Stack & Stage</h4>
@@ -205,6 +227,7 @@
 
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/parallax-3d.js"></script>
   <script src="js/software.js"></script>
 </body>
 </html>

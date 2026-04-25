@@ -6,9 +6,19 @@
   <title>Netwerk Projecten - Neïel Altmann</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/networking.css">
+  <link rel="stylesheet" href="css/parallax-3d.css">
 </head>
 <body>
-  <nav class="navbar">
+  <!-- Scroll Progress -->
+  <div class="scroll-progress"></div>
+
+  <!-- Floating Ambient Background -->
+  <div class="floating-elements-container" style="position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;">
+    <div class="floating-element floating-orb orb-blue animate-float float-delay-1" style="width: 400px; height: 400px; top: 10%; left: -10%;" data-float-parallax="0.015"></div>
+    <div class="floating-element floating-orb orb-teal animate-float-slow float-delay-2" style="width: 350px; height: 350px; top: 50%; right: -5%;" data-float-parallax="0.025"></div>
+  </div>
+
+  <nav class="navbar navbar-3d">
     <div class="container nav-container">
       <a href="index.html" class="logo">Neïel Altmann</a>
       <button class="hamburger" aria-label="Toggle menu">
@@ -30,48 +40,61 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero hero-3d parallax-scene" style="position: relative; z-index: 1;">
     <div class="container">
-      <div style="text-align: center;">
-        <h1 style="margin-bottom: 1rem;">Netwerk Engineering</h1>
-        <p style="font-size: 1.25rem; color: var(--text-gray);">Enterprise netwerkoplossingen en infrastructuren</p>
+      <div style="text-align: center;" class="reveal-element" data-reveal>
+        <h1 style="margin-bottom: 1rem;">
+          <span class="text-reveal revealed">
+            <span class="text-reveal-inner">Netwerk Engineering</span>
+          </span>
+        </h1>
+        <p class="reveal-element" style="font-size: 1.25rem; color: var(--text-gray);" data-reveal>Enterprise netwerkoplossingen en infrastructuren</p>
       </div>
     </div>
   </section>
 
   <!-- Certifications -->
-  <section class="section">
+  <section class="section" style="position: relative; z-index: 1;">
     <div class="container">
-      <h2 class="section-title">Certificeringen</h2>
-      <div class="grid grid-3">
-        <div class="card" style="text-align: center; padding: 2rem;">
-          <h3>CCNA</h3>
-          <p class="card-text">Cisco Certified Network Associate</p>
-          <p style="color: var(--text-light); font-size: 0.9rem;">Certificering: Mei 2023</p>
+      <h2 class="section-title reveal-element" data-reveal>Certificeringen</h2>
+      <div class="grid grid-3 stagger-container">
+        <div class="card reveal-element tilt-card hover-lift" data-reveal data-tilt style="text-align: center; padding: 2rem;">
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h3>CCNA</h3>
+            <p class="card-text">Cisco Certified Network Associate</p>
+            <p style="color: var(--text-light); font-size: 0.9rem;">Certificering: Mei 2023</p>
+          </div>
         </div>
         
-        <div class="card" style="text-align: center; padding: 2rem;">
-          <h3>Network Security</h3>
-          <p class="card-text">Beveiliging en hardening van netwerken</p>
-          <p style="color: var(--text-light); font-size: 0.9rem;">Specialisatie</p>
+        <div class="card reveal-element tilt-card hover-lift" data-reveal data-tilt style="text-align: center; padding: 2rem;">
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h3>Network Security</h3>
+            <p class="card-text">Beveiliging en hardening van netwerken</p>
+            <p style="color: var(--text-light); font-size: 0.9rem;">Specialisatie</p>
+          </div>
         </div>
         
-        <div class="card" style="text-align: center; padding: 2rem;">
-          <h3>Cloud Networking</h3>
-          <p class="card-text">Hybrid en cloud-based oplossingen</p>
-          <p style="color: var(--text-light); font-size: 0.9rem;">In ontwikkeling</p>
+        <div class="card reveal-element tilt-card hover-lift" data-reveal data-tilt style="text-align: center; padding: 2rem;">
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h3>Cloud Networking</h3>
+            <p class="card-text">Hybrid en cloud-based oplossingen</p>
+            <p style="color: var(--text-light); font-size: 0.9rem;">In ontwikkeling</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Project Showcase -->
-  <section class="section" style="background: var(--bg-light);">
+  <section class="section" style="background: var(--bg-light); position: relative; z-index: 1;">
     <div class="container">
-      <h2 class="section-title">Netwerk Projecten</h2>
+      <h2 class="section-title reveal-element" data-reveal>Netwerk Projecten</h2>
       
-      <div class="project-list">
-        <div class="net-project">
+      <div class="project-list stagger-container">
+        <div class="net-project reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
           <div class="project-header">
             <h3>Enterprise Firewall Implementation</h3>
             <span class="project-tag">ET-IT Consultancy</span>
@@ -87,7 +110,7 @@
           </div>
         </div>
         
-        <div class="net-project">
+        <div class="net-project reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
           <div class="project-header">
             <h3>WiFi Infrastructure Upgrade</h3>
             <span class="project-tag">JiNet Solutions</span>
@@ -103,7 +126,7 @@
           </div>
         </div>
         
-        <div class="net-project">
+        <div class="net-project reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
           <div class="project-header">
             <h3>Server Virtualization Project</h3>
             <span class="project-tag">Freelance</span>
@@ -119,7 +142,7 @@
           </div>
         </div>
         
-        <div class="net-project">
+        <div class="net-project reveal-element tilt-card hover-lift project-card-3d" data-reveal data-tilt>
           <div class="project-header">
             <h3>CCTV & NVR Installation</h3>
             <span class="project-tag">JiNet Solutions</span>
@@ -139,33 +162,51 @@
   </section>
 
   <!-- Skills -->
-  <section class="section">
+  <section class="section" style="position: relative; z-index: 1;">
     <div class="container">
-      <h2 class="section-title">Technische Vaardigheden</h2>
-      <div class="skills-grid">
-        <div class="skill-box">
-          <h4>Routing & Switching</h4>
-          <p>OSPF, EIGRP, BGP, VLANs, Trunking</p>
+      <h2 class="section-title reveal-element" data-reveal>Technische Vaardigheden</h2>
+      <div class="skills-grid stagger-container">
+        <div class="skill-box reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h4>Routing & Switching</h4>
+            <p>OSPF, EIGRP, BGP, VLANs, Trunking</p>
+          </div>
         </div>
-        <div class="skill-box">
-          <h4>Security</h4>
-          <p>Firewalls, ACLs, VPN, IPSec, SSL</p>
+        <div class="skill-box reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h4>Security</h4>
+            <p>Firewalls, ACLs, VPN, IPSec, SSL</p>
+          </div>
         </div>
-        <div class="skill-box">
-          <h4>Wireless</h4>
-          <p>WiFi 6, Mesh, Controller-based, RADIUS</p>
+        <div class="skill-box reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h4>Wireless</h4>
+            <p>WiFi 6, Mesh, Controller-based, RADIUS</p>
+          </div>
         </div>
-        <div class="skill-box">
-          <h4>Virtualization</h4>
-          <p>Hyper-V, VMware, Container networking</p>
+        <div class="skill-box reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h4>Virtualization</h4>
+            <p>Hyper-V, VMware, Container networking</p>
+          </div>
         </div>
-        <div class="skill-box">
-          <h4>Monitoring</h4>
-          <p>Nagios, PRTG, SNMP, Syslog</p>
+        <div class="skill-box reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h4>Monitoring</h4>
+            <p>Nagios, PRTG, SNMP, Syslog</p>
+          </div>
         </div>
-        <div class="skill-box">
-          <h4>CCTV</h4>
-          <p>NVR, IP Cameras, PoE, Remote access</p>
+        <div class="skill-box reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <h4>CCTV</h4>
+            <p>NVR, IP Cameras, PoE, Remote access</p>
+          </div>
         </div>
       </div>
     </div>
@@ -186,6 +227,7 @@
 
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/parallax-3d.js"></script>
   <script src="js/networking.js"></script>
 </body>
 </html>

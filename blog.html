@@ -5,9 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog - Neïel Altmann</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/parallax-3d.css">
 </head>
 <body>
-  <nav class="navbar">
+  <!-- Scroll Progress -->
+  <div class="scroll-progress"></div>
+
+  <!-- Floating Ambient Background -->
+  <div class="floating-elements-container" style="position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;">
+    <div class="floating-element floating-orb orb-blue animate-float float-delay-1" style="width: 400px; height: 400px; top: 10%; left: -10%;" data-float-parallax="0.015"></div>
+    <div class="floating-element floating-orb orb-green animate-float-slow float-delay-2" style="width: 300px; height: 300px; top: 60%; right: -5%;" data-float-parallax="0.025"></div>
+  </div>
+
+  <nav class="navbar navbar-3d">
     <div class="container nav-container">
       <a href="index.html" class="logo">Neïel Altmann</a>
       <button class="hamburger" aria-label="Toggle menu">
@@ -28,50 +38,62 @@
     </div>
   </nav>
 
-  <section class="section">
+  <section class="section" style="position: relative; z-index: 1;">
     <div class="container">
-      <h2 class="section-title" data-lang="blogTitle">Blog</h2>
-      <p class="section-subtitle" data-lang="blogDesc">Gedachten, ideeën en project updates</p>
+      <h2 class="section-title reveal-element" data-lang="blogTitle" data-reveal>Blog</h2>
+      <p class="section-subtitle reveal-element" data-lang="blogDesc" data-reveal>Gedachten, ideeën en project updates</p>
       
-      <div class="grid grid-2">
-        <article class="card blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">15 april 2026</span>
-            <span class="blog-category">Development</span>
+      <div class="grid grid-2 stagger-container">
+        <article class="card blog-card reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <div class="blog-meta">
+              <span class="blog-date">15 april 2026</span>
+              <span class="blog-category">Development</span>
+            </div>
+            <h3 class="card-title">Blog Post Titel</h3>
+            <p class="card-text">Een korte samenvatting van de blog post...</p>
+            <a href="post.html" class="btn btn-primary btn-3d magnetic-btn" data-lang="readMore">Lees meer</a>
           </div>
-          <h3 class="card-title">Blog Post Titel</h3>
-          <p class="card-text">Een korte samenvatting van de blog post...</p>
-          <a href="post.html" class="btn btn-primary" data-lang="readMore">Lees meer</a>
         </article>
         
-        <article class="card blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">10 april 2026</span>
-            <span class="blog-category">Design</span>
+        <article class="card blog-card reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <div class="blog-meta">
+              <span class="blog-date">10 april 2026</span>
+              <span class="blog-category">Design</span>
+            </div>
+            <h3 class="card-title">Blog Post Titel</h3>
+            <p class="card-text">Een korte samenvatting van de blog post...</p>
+            <a href="post.html" class="btn btn-primary btn-3d magnetic-btn" data-lang="readMore">Lees meer</a>
           </div>
-          <h3 class="card-title">Blog Post Titel</h3>
-          <p class="card-text">Een korte samenvatting van de blog post...</p>
-          <a href="post.html" class="btn btn-primary" data-lang="readMore">Lees meer</a>
         </article>
         
-        <article class="card blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">5 april 2026</span>
-            <span class="blog-category">Tutorial</span>
+        <article class="card blog-card reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <div class="blog-meta">
+              <span class="blog-date">5 april 2026</span>
+              <span class="blog-category">Tutorial</span>
+            </div>
+            <h3 class="card-title">Blog Post Titel</h3>
+            <p class="card-text">Een korte samenvatting van de blog post...</p>
+            <a href="post.html" class="btn btn-primary btn-3d magnetic-btn" data-lang="readMore">Lees meer</a>
           </div>
-          <h3 class="card-title">Blog Post Titel</h3>
-          <p class="card-text">Een korte samenvatting van de blog post...</p>
-          <a href="post.html" class="btn btn-primary" data-lang="readMore">Lees meer</a>
         </article>
         
-        <article class="card blog-card">
-          <div class="blog-meta">
-            <span class="blog-date">1 april 2026</span>
-            <span class="blog-category">Project</span>
+        <article class="card blog-card reveal-element tilt-card hover-lift" data-reveal data-tilt>
+          <div class="tilt-card-shine"></div>
+          <div class="tilt-card-content">
+            <div class="blog-meta">
+              <span class="blog-date">1 april 2026</span>
+              <span class="blog-category">Project</span>
+            </div>
+            <h3 class="card-title">Blog Post Titel</h3>
+            <p class="card-text">Een korte samenvatting van de blog post...</p>
+            <a href="post.html" class="btn btn-primary btn-3d magnetic-btn" data-lang="readMore">Lees meer</a>
           </div>
-          <h3 class="card-title">Blog Post Titel</h3>
-          <p class="card-text">Een korte samenvatting van de blog post...</p>
-          <a href="post.html" class="btn btn-primary" data-lang="readMore">Lees meer</a>
         </article>
       </div>
     </div>
@@ -91,5 +113,6 @@
 
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/parallax-3d.js"></script>
 </body>
 </html>
