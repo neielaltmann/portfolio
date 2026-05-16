@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Werk - Neïel Altmann</title>
+  <title>Werk — Neïel Altmann</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/work.css">
+  <link rel="stylesheet" href="css/networking.css">
+  <link rel="stylesheet" href="css/software.css">
 </head>
-<body>
+<body data-page="work">
+
   <nav class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="logo">Neïel Altmann</a>
@@ -17,116 +20,304 @@
         <span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="index.html" data-lang="home">Home</a></li>
-        <li><a href="about.html">Over Mij</a></li>
-        <li><a href="work.html" class="active" data-lang="work">Werk</a></li>
-        <li><a href="jinet.html">JiNet Solutions</a></li>
-        <li><a href="networking.html">Netwerken</a></li>
-        <li><a href="software.html">Software</a></li>
-        <li><a href="blog.html" data-lang="blog">Blog</a></li>
-        <li><a href="contact.html" data-lang="contact">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav_about">Over mij</a></li>
+        <li><a href="work.html" data-i18n="nav_work">Werk</a></li>
+        <li><a href="jinet.html" data-i18n="nav_jinet">JiNet Solutions</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="section">
+  <section class="">
     <div class="container">
-      <h2 class="section-title" data-lang="myWork">Mijn Werk</h2>
-      <p class="section-subtitle" data-lang="workDesc">Een overzicht van al mijn projecten en ervaring</p>
-      
-      <!-- Networking Projects -->
-      <h3 style="text-align: center; margin: 3rem 0 2rem; color: var(--primary-blue);">Netwerk Engineering</h3>
-      <div class="grid grid-3">
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">ET-IT Consultancy</span>
-          <h3 class="card-title">Enterprise Firewall Setup</h3>
-          <p class="card-text">Opzetten en configureren van enterprise firewalls voor beveiligde netwerktoegang.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
-        </div>
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">Freelance</span>
-          <h3 class="card-title">VPN Infrastructure</h3>
-          <p class="card-text">Implementatie van VPN-oplossingen voor remote werken op afstand.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
-        </div>
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">JiNet Solutions</span>
-          <h3 class="card-title">Camera (NVR) Installatie</h3>
-          <p class="card-text">Installatie en configuratie van NVR camera systemen voor bedrijven.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
+      <h1 class="section-title work-page-title" data-i18n="work_title">Mijn werk</h1>
+      <p class="section-subtitle" data-i18n="work_desc"></p>
+      <p class="work-jump-links">
+        <a href="#werk-netwerk" data-i18n="work_hub_net">Naar netwerk & infrastructuur</a>
+        <span aria-hidden="true"> · </span>
+        <a href="#werk-software" data-i18n="work_hub_soft">Naar software & stack</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="werk-netwerk" class=" work-anchored-section" tabindex="-1">
+    <div class="hero work-inline-hero">
+      <div class="container">
+        <div class="hero-page-inner">
+          <h2 class="hero-page-title" data-i18n="net_hero_title">Netwerk Engineering</h2>
+          <p class="hero-page-lead" data-i18n="net_hero_sub">Enterprise netwerkoplossingen en infrastructuren</p>
         </div>
       </div>
-      
-      <!-- Software Development Projects -->
-      <h3 style="text-align: center; margin: 3rem 0 2rem; color: var(--primary-green);">Software Development</h3>
-      <div class="grid grid-3">
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">Datasur</span>
-          <h3 class="card-title">Stage Project</h3>
-          <p class="card-text">Software development project tijdens mijn stage bij Datasur (apr-jul 2025).</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
-        </div>
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">JiNet Solutions</span>
-          <h3 class="card-title">Website Development</h3>
-          <p class="card-text">Ontwikkeling van websites en webapplicaties voor klanten.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
-        </div>
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">Personal</span>
-          <h3 class="card-title">Portfolio Website</h3>
-          <p class="card-text">Deze portfolio website gebouwd met HTML, CSS en JavaScript.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
+    </div>
+
+    <div class="container">
+      <div class="work-stack-block">
+        <h2 class="section-title" data-i18n="net_cert_title">Opleiding & Certificeringen</h2>
+        <div class="grid grid-3">
+          <div class="card cert-card-centered">
+            <h3>Bachelor in ICT in Software Engineering</h3>
+            <p class="card-text">Unasat</p>
+            <p class="cert-note">2025 – heden</p>
+          </div>
+          <div class="card cert-card-centered">
+            <h3>Software Engineering</h3>
+            <p class="card-text">Natin</p>
+            <p class="cert-note">2021 – 2023 Medewerker Beheer ICT</p>
+            <p class="cert-note">2023 – 2025 Software Developer</p>
+          </div>
+          <div class="card cert-card-centered">
+            <h3>Cisco-certificeringen</h3>
+            <p class="card-text">Cisco</p>
+            <p class="cert-note">CCNA-certificering</p>
+            <p class="cert-note">ITN-certificering — mei 2023</p>
+          </div>
         </div>
       </div>
-      
-      <!-- JiNet Solutions Projects -->
-      <h3 style="text-align: center; margin: 3rem 0 2rem; color: var(--accent-teal);">JiNet Solutions - Mijn Bedrijf</h3>
-      <div class="grid grid-3">
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">IT Services</span>
-          <h3 class="card-title">Hardware Reparatie</h3>
-          <p class="card-text">Reparatie en upgrades van computers en laptops voor particulieren en bedrijven.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
+
+      <section class="section section-muted work-stack-block">
+        <h2 class="section-title" data-i18n="net_proj_title">Netwerk Projecten</h2>
+        <div class="project-list">
+          <div class="net-project">
+            <div class="project-header">
+              <h3 data-i18n="net_p1_title">Enterprise Firewall Implementation</h3>
+              <span class="project-tag">Freelance</span>
+            </div>
+            <p class="card-text" data-i18n="net_p1_body"></p>
+            <div class="tech-stack">
+              <span class="tech">Fortinet</span>
+              <span class="tech">VPN</span>
+              <span class="tech">Security</span>
+            </div>
+          </div>
+          <div class="net-project">
+            <div class="project-header">
+              <h3 data-i18n="net_p2_title">WiFi Infrastructure Upgrade</h3>
+              <span class="project-tag">ET-IT Consultancy</span>
+            </div>
+            <p class="card-text" data-i18n="net_p2_body"></p>
+            <div class="tech-stack">
+              <span class="tech">Ubiquiti</span>
+              <span class="tech">VLAN</span>
+              <span class="tech">RADIUS</span>
+            </div>
+          </div>
+          <div class="net-project">
+            <div class="project-header">
+              <h3 data-i18n="net_p3_title">Server Virtualization Project</h3>
+              <span class="project-tag">ET-IT Consultancy</span>
+            </div>
+            <p class="card-text" data-i18n="net_p3_body"></p>
+            <div class="tech-stack">
+              <span class="tech">Hyper-V</span>
+              <span class="tech">Windows Server</span>
+              <span class="tech">Veeam</span>
+            </div>
+          </div>
+          <div class="net-project">
+            <div class="project-header">
+              <h3 data-i18n="net_p4_title">CCTV & NVR Installation</h3>
+              <span class="project-tag">JiNet Solutions</span>
+            </div>
+            <p class="card-text" data-i18n="net_p4_body"></p>
+            <div class="tech-stack">
+              <span class="tech">Hikvision</span>
+              <span class="tech">PoE</span>
+              <span class="tech">Mobile App</span>
+            </div>
+          </div>
         </div>
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">IT Services</span>
-          <h3 class="card-title">Software Installatie</h3>
-          <p class="card-text">Installatie van Office, AutoCAD, Photoshop en andere software.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
-        </div>
-        <div class="card project-card">
-          <div class="project-image"></div>
-          <span class="blog-category" style="margin-bottom: 0.5rem; display: inline-block;">IT Services</span>
-          <h3 class="card-title">Technische Support</h3>
-          <p class="card-text">Onderhoud en support voor IT-infrastructuren van kleine bedrijven.</p>
-          <a href="#" class="btn btn-primary" data-lang="viewProject">Bekijk project</a>
+      </section>
+
+      <div class="work-stack-block">
+        <h2 class="section-title" data-i18n="net_skills_title">Technische Vaardigheden</h2>
+        <div class="skills-grid">
+          <div class="skill-box">
+            <h4 data-i18n="net_skill_route">Routing & Switching</h4>
+            <p data-i18n="net_skill_route_body">OSPF, EIGRP, BGP, VLANs, Trunking</p>
+          </div>
+          <div class="skill-box">
+            <h4 data-i18n="net_skill_sec">Security</h4>
+            <p data-i18n="net_skill_sec_body">Firewalls, ACLs, VPN, IPSec, SSL</p>
+          </div>
+          <div class="skill-box">
+            <h4 data-i18n="net_skill_wifi">Wireless</h4>
+            <p data-i18n="net_skill_wifi_body">WiFi 6, Mesh, Controller-based, RADIUS</p>
+          </div>
+          <div class="skill-box">
+            <h4 data-i18n="net_skill_virt">Virtualization</h4>
+            <p data-i18n="net_skill_virt_body">Hyper-V, VMware, Container networking</p>
+          </div>
+          <div class="skill-box">
+            <h4 data-i18n="net_skill_mon">Monitoring</h4>
+            <p data-i18n="net_skill_mon_body">Nagios, PRTG, SNMP, Syslog</p>
+          </div>
+          <div class="skill-box">
+            <h4 data-i18n="net_skill_cctv">CCTV</h4>
+            <p data-i18n="net_skill_cctv_body">NVR, IP Cameras, PoE, Remote access</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <section id="werk-software" class=" work-anchored-section section-muted" tabindex="-1">
+    <div class=" work-inline-hero section-muted-reset">
+      <div class="container">
+        <div class="hero-page-inner">
+          <h2 class="hero-page-title" data-i18n="sw_hero_title">Software Development</h2>
+          <p class="hero-page-lead" data-i18n="sw_hero_sub">Web applicaties en software oplossingen</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <section class="section nested-zero section-muted-reset">
+        <h2 class="section-title" data-i18n="sw_stack_title">Tech Stack</h2>
+        <div class="tech-grid">
+          <div class="tech-card">
+            <h3 data-i18n="sw_fe_title">Frontend</h3>
+            <ul>
+              <li>HTML5 & CSS3</li>
+              <li>JavaScript (ES6+)</li>
+              <li>React</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+          <div class="tech-card">
+            <h3 data-i18n="sw_be_title">Backend</h3>
+            <ul>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>REST API's</li>
+              <li>Database Design</li>
+            </ul>
+          </div>
+          <div class="tech-card">
+            <h3 data-i18n="sw_tools_title">Tools</h3>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>VS Code</li>
+              <li>Figma</li>
+              <li>Postman</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section nested-zero bg-white-round">
+        <h2 class="section-title" data-i18n="sw_proj_title">Software Projecten</h2>
+        <div class="software-projects">
+          <div class="sw-project">
+            <div class="project-visual">
+              <img src="img/software-portfolio.jpg" alt="" class="software-thumb software-thumb-fit">
+            </div>
+            <div class="project-details">
+              <h3 data-i18n="sw_p1_title">Persoonlijke Portfolio</h3>
+              <p class="card-text" data-i18n="sw_p1_body"></p>
+              <div class="project-links project-links-inline">
+                <a href="https://neielaltmann.github.io/portfolio/index.html" class="text-link-strong" data-i18n="sw_btn_demo">Live Demo</a>
+              </div>
+              <div class="tech-used">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+          <div class="sw-project">
+            <div class="project-visual">
+              <img src="img/software-stage.jpg" alt="" class="software-thumb software-thumb-fit">
+            </div>
+            <div class="project-details">
+              <h3 data-i18n="sw_p2_title">Datasur Stage Project</h3>
+              <p class="card-text" data-i18n="sw_p2_body"></p>
+              <div class="project-links project-links-inline">
+                <span class="text-muted-label" data-i18n="sw_private">Privé</span>
+              </div>
+              <div class="tech-used">
+                <span>JavaScript</span>
+                <span>Database</span>
+                <span>API</span>
+              </div>
+            </div>
+          </div>
+          <div class="sw-project">
+            <div class="project-visual">
+              <img src="img/software-jinet-site.jpg" alt="" class="software-thumb software-thumb-fit">
+            </div>
+            <div class="project-details">
+              <h3>Ji-Flix</h3>
+              <p class="card-text">Een gratis movie live tv services streaming app cross platform</p>
+              <div class="project-links project-links-inline">
+                <a href="https://ji-flix.vercel.app" class="text-link-strong" target="_blank">Live Demo</a>
+              </div>
+              <div class="tech-used">
+                <span>Cross Platform</span>
+                <span>Streaming</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section nested-zero section-muted-reset">
+        <h2 class="section-title" data-i18n="sw_learn_title">Leerpad & Groei</h2>
+        <div class="learning-timeline">
+          <div class="learning-item">
+            <div class="learning-date">2021</div>
+            <div class="learning-content">
+              <h4>HTML & CSS</h4>
+              <p>Basis web development fundamenten geleerd</p>
+            </div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-date">2022</div>
+            <div class="learning-content">
+              <h4>Bootstrap, PHP, JavaScript</h4>
+              <p>Frontend frameworks en backend programmeren</p>
+            </div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-date">2023</div>
+            <div class="learning-content">
+              <h4>Python, C#, C++</h4>
+              <p>Programmeertalen en software development</p>
+            </div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-date">2024</div>
+            <div class="learning-content">
+              <h4>Laravel</h4>
+              <p>PHP framework voor web applicaties</p>
+            </div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-date">2025</div>
+            <div class="learning-content">
+              <h4>Flutter, Node.js & Express.js</h4>
+              <p>Cross-platform mobile development en backend frameworks</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="container">
-      <p data-lang="footer">2026 Neïel Altmann. Alle rechten voorbehouden.</p>
+      <p data-i18n="footer_copyright">2026 Neïel Altmann. Alle rechten voorbehouden.</p>
     </div>
   </footer>
 
-  <!-- Floating Language Toggle -->
   <div class="lang-toggle">
-    <button id="lang-nl" class="lang-btn active">NL</button>
-    <button id="lang-en" class="lang-btn">EN</button>
+    <button type="button" id="lang-nl" class="lang-btn active">NL</button>
+    <button type="button" id="lang-en" class="lang-btn">EN</button>
   </div>
 
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/networking.js"></script>
+  <script src="js/software.js"></script>
 </body>
 </html>

@@ -1,21 +1,112 @@
-/* Work Page Specific Styles */
+/* Work page layout (netwerk + software gecombineerd op één pagina) */
 
+.work-page-title {
+  margin-bottom: 0.25rem;
+}
+
+.work-jump-links {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.work-jump-links a {
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(59, 130, 246, 0.55);
+  padding-bottom: 0.08rem;
+}
+
+.work-jump-links a:hover {
+  border-bottom-style: solid;
+  border-bottom-color: var(--primary-blue);
+}
+
+.work-anchored-section {
+  scroll-margin-top: 5.5rem;
+}
+
+.work-inline-hero.hero {
+  padding: 3rem 0;
+  margin-bottom: 0;
+}
+
+.work-stack-block {
+  padding: 2rem 0 2.75rem;
+}
+
+.work-stack-block:first-of-type {
+  padding-top: 1rem;
+}
+
+/* Op software-deel: heldere panelen tegen grijze sectie-achtergrond */
+.section-muted-reset {
+  background: var(--bg-white);
+}
+
+.section-muted-reset.work-inline-hero.hero,
+.section-muted-reset.work-inline-hero {
+  border-radius: 0;
+}
+
+.bg-white-round {
+  background: var(--bg-white);
+  border-radius: 0;
+}
+
+@media (max-width: 768px) {
+  .work-stack-block {
+    padding: 1.5rem 0 2rem;
+  }
+
+  .work-inline-hero.hero {
+    padding: 2rem 0;
+  }
+}
+
+/* Inline links ipv knoppen in software-blokken */
+.project-links-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.65rem;
+  margin-top: auto;
+}
+
+.text-link-strong {
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.text-link-strong:hover {
+  color: #1d4ed8;
+}
+
+.link-sep {
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+.text-muted-label {
+  color: var(--text-gray);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+/* Minder overdreven verticale padding door geneste sections op werk-pagina */
+.work-anchored-section .container > section.section {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+/* Legacy grids */
 .project-card {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-.project-image {
-  width: 100%;
-  height: 200px;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.project-card .card-title {
-  margin-top: auto;
 }
 
 .project-card .btn {
@@ -27,12 +118,8 @@
   flex-grow: 1;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-  
+  .grid-2,
   .grid-3 {
     grid-template-columns: 1fr;
   }

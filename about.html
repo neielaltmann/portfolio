@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Over Mij - Neïel Altmann</title>
+  <title>Over mij — Neïel Altmann</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/about.css">
 </head>
-<body>
+<body data-page="about">
+
   <nav class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="logo">Neïel Altmann</a>
@@ -17,148 +18,121 @@
         <span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">Over Mij</a></li>
-        <li><a href="work.html">Werk</a></li>
-        <li><a href="jinet.html">JiNet Solutions</a></li>
-        <li><a href="networking.html">Netwerken</a></li>
-        <li><a href="software.html">Software</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav_about">Over mij</a></li>
+        <li><a href="work.html" data-i18n="nav_work">Werk</a></li>
+        <li><a href="jinet.html" data-i18n="nav_jinet">JiNet Solutions</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Full Width Hero with Photo -->
-  <section class="about-hero">
+  <section class="about-hero hero-parallax hero-parallax-intro">
     <div class="about-hero-content">
       <div class="about-hero-text">
-        <h1>Dit is mijn verhaal</h1>
-        <p class="lead">Van student tot Senior System Engineer & ondernemer in Suriname</p>
+        <h1 data-i18n="ab_hero_title">Dit is mijn verhaal</h1>
+        <p class="lead" data-i18n="ab_hero_lead">Van student tot Senior System Engineer & ondernemer in Suriname</p>
         <div class="hero-stats">
           <div class="stat">
             <span class="stat-number">2021</span>
-            <span class="stat-label">Start opleiding</span>
+            <span class="stat-label" data-i18n="ab_stat_start">Start opleiding</span>
           </div>
           <div class="stat">
             <span class="stat-number">2023</span>
-            <span class="stat-label">JiNet Solutions</span>
+            <span class="stat-label" data-i18n="ab_stat_jinet">Software Developer</span>
           </div>
           <div class="stat">
             <span class="stat-number">2025</span>
-            <span class="stat-label">Senior Engineer</span>
+            <span class="stat-label" data-i18n="ab_stat_senior">Senior Engineer</span>
           </div>
         </div>
       </div>
-      <div class="about-hero-image">
-        <img src="img/uitreiking.jpg" alt="Neïel Altmann" class="about-photo">
-        <p class="photo-caption">Diploma uitreiking - Natin 2025</p>
+      <div class="about-hero-image parallax-photo-shell" data-soft-parallax>
+        <img src="img/uitreiking.jpg" alt="Neïel Altmann" class="about-photo parallax-photo-target">
+        <p class="photo-caption" data-i18n="ab_cap_grad">Diploma-uitreiking — Natin 2025</p>
       </div>
     </div>
   </section>
 
-  <!-- Story Section -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Mijn Verhaal</h2>
+      <h2 class="section-title" data-i18n="ab_story_title">Mijn Verhaal</h2>
       <div class="story-content">
-        <p class="story-text">
-          Ik ben Neïel Altmann, een gepassioneerde IT-professional uit Paramaribo, Suriname. 
-          Mijn reis in de technologie begon tijdens mijn studie Software Engineering aan Natin, 
-          waar ik mijn liefde voor zowel netwerken als software ontwikkeling ontdekte.
-        </p>
-        <p class="story-text">
-          Tegenwoordig werk ik als Senior System Engineer bij ET-IT Consultancy, waar ik 
-          complexe netwerkinfrastructuren opzet en onderhoud voor diverse klanten. Van firewalls 
-          en VPN-oplossingen tot Windows servers en Hypervisors - ik zorg dat bedrijven veilig 
-          en efficiënt kunnen werken.
-        </p>
-        <p class="story-text">
-          Naast mijn baan heb ik mijn eigen bedrijf JiNet Solutions opgericht. Hier bied ik 
-          IT-diensten aan kleine bedrijven en particulieren, van hardware reparaties tot 
-          complete netwerkoplossingen en website ontwikkeling.
-        </p>
+        <p class="story-text" data-i18n="ab_story_p1"></p>
+        <p class="story-text" data-i18n="ab_story_p2"></p>
+        <p class="story-text" data-i18n="ab_story_p3"></p>
       </div>
     </div>
   </section>
 
-  <!-- Experience Timeline -->
-  <section class="section" style="background: var(--bg-light);">
+  <section class="section section-muted">
     <div class="container">
-      <h2 class="section-title">Ervaring</h2>
-      
+      <h2 class="section-title" data-i18n="ab_exp_title">Ervaring</h2>
       <div class="timeline">
         <div class="timeline-item">
-          <div class="timeline-date">2025 - Heden</div>
+          <div class="timeline-date" data-i18n="ab_tl_d1">2025 – heden</div>
           <div class="timeline-content">
-            <h3>Senior System Engineer</h3>
+            <h3 data-i18n="ab_tl_r1">Senior System Engineer</h3>
             <p class="company">ET-IT Consultancy</p>
-            <p>Opzetten en onderhouden van netwerkinfrastructuren, firewalls, VPN's en servers voor enterprise klanten.</p>
+            <p data-i18n="ab_tl_b1"></p>
           </div>
         </div>
-        
         <div class="timeline-item">
-          <div class="timeline-date">2025</div>
+          <div class="timeline-date" data-i18n="ab_tl_d2">2025</div>
           <div class="timeline-content">
-            <h3>Junior Software Developer (Stage)</h3>
+            <h3 data-i18n="ab_tl_r2">Junior Software Developer (Stage)</h3>
             <p class="company">Datasur</p>
-            <p>Software development projecten en het opdoen van praktijkervaring in een professionele omgeving.</p>
+            <p data-i18n="ab_tl_b2"></p>
           </div>
         </div>
-        
         <div class="timeline-item">
-          <div class="timeline-date">2023 - Heden</div>
+          <div class="timeline-date" data-i18n="ab_tl_d3">2026 – heden</div>
           <div class="timeline-content">
-            <h3>Eigenaar / System Administrator</h3>
-            <p class="company">JiNet Solutions (Eigen Bedrijf)</p>
-            <p>IT-diensten voor kleine bedrijven: netwerken, reparaties, camera installaties en webdevelopment.</p>
+            <h3 data-i18n="ab_tl_r3">Software Developer</h3>
+            <p class="company" data-i18n="ab_tl_co3">JiNet Solutions</p>
+            <p data-i18n="ab_tl_b3"></p>
           </div>
         </div>
-        
         <div class="timeline-item">
-          <div class="timeline-date">2021 - 2025</div>
+          <div class="timeline-date" data-i18n="ab_tl_d4">2021 – 2025</div>
           <div class="timeline-content">
-            <h3>Software Engineering</h3>
+            <h3 data-i18n="ab_tl_r4">Software Engineering</h3>
             <p class="company">Natin</p>
-            <p>Hogere opleiding Software Engineering met focus op netwerken en programmeren.</p>
+            <p data-i18n="ab_tl_b4"></p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Education & Certs -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Opleiding & Certificaten</h2>
+      <h2 class="section-title" data-i18n="ab_edu_title">Opleiding & Certificaten</h2>
       <div class="grid grid-3">
         <div class="card cert-card">
-          <h3>Bachelor of Science in Software Engineering</h3>
+          <h3 data-i18n="ab_cert_bsc">Bachelor in ICT in Software Engineering</h3>
           <p class="institution">Unasat</p>
-          <p class="year">2025 - Heden</p>
+          <p class="year" data-i18n="ab_cert_unasat_year">2025 – heden</p>
         </div>
-        
         <div class="card cert-card">
-          <h3>Software Engineering</h3>
+          <h3 data-i18n="ab_cert_se">Software Engineering</h3>
           <p class="institution">Natin</p>
-          <p class="year">2021 - 2023 Medewerker Beheer ICT</p>
-          <p class="year">2023 - 2025 Software Developer</p>
+          <p class="year" data-i18n="ab_cert_natin_line1"></p>
+          <p class="year" data-i18n="ab_cert_natin_line2"></p>
         </div>
-        
         <div class="card cert-card">
-          <h3>Cisco Certifications</h3>
+          <h3 data-i18n="ab_cert_cisco">Cisco Certifications</h3>
           <p class="institution">Cisco</p>
-          <p class="year">CCNA Certification</p>
-          <p class="year">ITN Certification - Mei 2023</p>
+          <p class="year" data-i18n="ab_cert_ccna"></p>
+          <p class="year" data-i18n="ab_cert_itn"></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Detail -->
-  <section class="section" style="background: var(--bg-light);">
+  <section class="section section-muted">
     <div class="container">
-      <h2 class="section-title">Vaardigheden in Detail</h2>
+      <h2 class="section-title" data-i18n="ab_detail_title">Vaardigheden in Detail</h2>
       <div class="skills-detail">
         <div class="skill-category">
           <h3>Netwerk Engineering</h3>
@@ -173,7 +147,6 @@
             <li>DNS management</li>
           </ul>
         </div>
-        
         <div class="skill-category">
           <h3>System Administration</h3>
           <ul>
@@ -184,7 +157,6 @@
             <li>Backup & Recovery</li>
           </ul>
         </div>
-        
         <div class="skill-category">
           <h3>Web Development</h3>
           <ul>
@@ -198,7 +170,6 @@
             <li>Database integratie</li>
           </ul>
         </div>
-        
         <div class="skill-category">
           <h3>Security & CCTV</h3>
           <ul>
@@ -208,7 +179,6 @@
             <li>Security audits</li>
           </ul>
         </div>
-        
         <div class="skill-category">
           <h3>Software Development</h3>
           <ul>
@@ -224,17 +194,15 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>2026 Neïel Altmann. Alle rechten voorbehouden.</p>
+      <p data-i18n="footer_copyright">2026 Neïel Altmann. Alle rechten voorbehouden.</p>
     </div>
   </footer>
 
-  <!-- Floating Language Toggle -->
   <div class="lang-toggle">
-    <button id="lang-nl" class="lang-btn active">NL</button>
-    <button id="lang-en" class="lang-btn">EN</button>
+    <button type="button" id="lang-nl" class="lang-btn active">NL</button>
+    <button type="button" id="lang-en" class="lang-btn">EN</button>
   </div>
 
   <script src="js/translations.js"></script>
