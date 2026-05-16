@@ -3,23 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Over Mij - Neïel Altmann</title>
+  <title>Over mij — Neïel Altmann</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/about.css">
-  <link rel="stylesheet" href="css/parallax-3d.css">
 </head>
-<body>
-  <!-- Scroll Progress -->
-  <div class="scroll-progress"></div>
+<body data-page="about">
 
-  <!-- Floating Ambient Background -->
-  <div class="floating-elements-container" style="position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;">
-    <div class="floating-element floating-orb orb-blue animate-float float-delay-1" style="width: 400px; height: 400px; top: 10%; left: -10%;" data-float-parallax="0.015"></div>
-    <div class="floating-element floating-orb orb-green animate-float-slow float-delay-2" style="width: 300px; height: 300px; top: 60%; right: -5%;" data-float-parallax="0.025"></div>
-    <div class="floating-element floating-orb orb-teal animate-float float-delay-3" style="width: 250px; height: 250px; top: 30%; right: 20%;" data-float-parallax="0.02"></div>
-  </div>
-
-  <nav class="navbar navbar-3d">
+  <nav class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="logo">Neïel Altmann</a>
       <button class="hamburger" aria-label="Toggle menu">
@@ -28,168 +18,123 @@
         <span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">Over Mij</a></li>
-        <li><a href="work.html">Werk</a></li>
-        <li><a href="jinet.html">JiNet Solutions</a></li>
-        <li><a href="networking.html">Netwerken</a></li>
-        <li><a href="software.html">Software</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav_about">Over mij</a></li>
+        <li><a href="work.html" data-i18n="nav_work">Werk</a></li>
+        <li><a href="jinet.html" data-i18n="nav_jinet">JiNet Solutions</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Full Width Hero with Photo -->
-  <section class="about-hero parallax-scene" style="position: relative; z-index: 1;">
+  <section class="about-hero hero-parallax hero-parallax-intro">
     <div class="about-hero-content">
-      <div class="about-hero-text reveal-element" data-reveal>
-        <h1 class="text-reveal revealed">
-          <span class="text-reveal-inner">Dit is mijn verhaal</span>
-        </h1>
-        <p class="lead reveal-element" data-reveal>Van student tot Senior System Engineer & ondernemer in Suriname</p>
-        <div class="hero-stats reveal-element stagger-container" data-reveal>
-          <div class="stat tilt-card" data-tilt>
-            <div class="tilt-card-shine"></div>
-            <span class="stat-number tilt-card-content">2021</span>
-            <span class="stat-label tilt-card-content">Start opleiding</span>
+      <div class="about-hero-text">
+        <h1 data-i18n="ab_hero_title">Dit is mijn verhaal</h1>
+        <p class="lead" data-i18n="ab_hero_lead">Van student tot Senior System Engineer & ondernemer in Suriname</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">2021</span>
+            <span class="stat-label" data-i18n="ab_stat_start">Start opleiding</span>
           </div>
-          <div class="stat tilt-card" data-tilt>
-            <div class="tilt-card-shine"></div>
-            <span class="stat-number tilt-card-content">2023</span>
-            <span class="stat-label tilt-card-content">JiNet Solutions</span>
+          <div class="stat">
+            <span class="stat-number">2023</span>
+            <span class="stat-label" data-i18n="ab_stat_jinet">Software Developer</span>
           </div>
-          <div class="stat tilt-card" data-tilt>
-            <div class="tilt-card-shine"></div>
-            <span class="stat-number tilt-card-content">2025</span>
-            <span class="stat-label tilt-card-content">Senior Engineer</span>
+          <div class="stat">
+            <span class="stat-number">2025</span>
+            <span class="stat-label" data-i18n="ab_stat_senior">Senior Engineer</span>
           </div>
         </div>
       </div>
-      <div class="about-hero-image reveal-element reveal-scale" data-reveal>
-        <div class="tilt-card hero-photo-3d" data-tilt>
-          <div class="tilt-card-shine"></div>
-          <img src="img/uitreiking.jpg" alt="Neïel Altmann" class="about-photo tilt-card-content">
-        </div>
-        <p class="photo-caption">Diploma uitreiking - Natin 2025</p>
+      <div class="about-hero-image parallax-photo-shell" data-soft-parallax>
+        <img src="img/uitreiking.jpg" alt="Neïel Altmann" class="about-photo parallax-photo-target">
+        <p class="photo-caption" data-i18n="ab_cap_grad">Diploma-uitreiking — Natin 2025</p>
       </div>
     </div>
   </section>
 
-  <!-- Story Section -->
-  <section class="section" style="position: relative; z-index: 1;">
+  <section class="section">
     <div class="container">
-      <h2 class="section-title reveal-element" data-reveal>Mijn Verhaal</h2>
+      <h2 class="section-title" data-i18n="ab_story_title">Mijn Verhaal</h2>
       <div class="story-content">
-        <p class="story-text reveal-element" data-reveal>
-          Ik ben Neïel Altmann, een gepassioneerde IT-professional uit Paramaribo, Suriname. 
-          Mijn reis in de technologie begon tijdens mijn studie Software Engineering aan Natin, 
-          waar ik mijn liefde voor zowel netwerken als software ontwikkeling ontdekte.
-        </p>
-        <p class="story-text reveal-element" data-reveal>
-          Tegenwoordig werk ik als Senior System Engineer bij ET-IT Consultancy, waar ik 
-          complexe netwerkinfrastructuren opzet en onderhoud voor diverse klanten. Van firewalls 
-          en VPN-oplossingen tot Windows servers en Hypervisors - ik zorg dat bedrijven veilig 
-          en efficiënt kunnen werken.
-        </p>
-        <p class="story-text reveal-element" data-reveal>
-          Naast mijn baan heb ik mijn eigen bedrijf JiNet Solutions opgericht. Hier bied ik 
-          IT-diensten aan kleine bedrijven en particulieren, van hardware reparaties tot 
-          complete netwerkoplossingen en website ontwikkeling.
-        </p>
+        <p class="story-text" data-i18n="ab_story_p1"></p>
+        <p class="story-text" data-i18n="ab_story_p2"></p>
+        <p class="story-text" data-i18n="ab_story_p3"></p>
       </div>
     </div>
   </section>
 
-  <!-- Experience Timeline -->
-  <section class="section" style="background: var(--bg-light); position: relative; z-index: 1;">
+  <section class="section section-muted">
     <div class="container">
-      <h2 class="section-title reveal-element" data-reveal>Ervaring</h2>
-      
-      <div class="timeline stagger-container">
-        <div class="timeline-item reveal-element tilt-card hover-lift" data-reveal data-tilt>
-          <div class="timeline-date">2025 - Heden</div>
+      <h2 class="section-title" data-i18n="ab_exp_title">Ervaring</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date" data-i18n="ab_tl_d1">2025 – heden</div>
           <div class="timeline-content">
-            <h3>Senior System Engineer</h3>
+            <h3 data-i18n="ab_tl_r1">Senior System Engineer</h3>
             <p class="company">ET-IT Consultancy</p>
-            <p>Opzetten en onderhouden van netwerkinfrastructuren, firewalls, VPN's en servers voor enterprise klanten.</p>
+            <p data-i18n="ab_tl_b1"></p>
           </div>
         </div>
-        
-        <div class="timeline-item reveal-element tilt-card hover-lift" data-reveal data-tilt>
-          <div class="timeline-date">2025</div>
+        <div class="timeline-item">
+          <div class="timeline-date" data-i18n="ab_tl_d2">2025</div>
           <div class="timeline-content">
-            <h3>Junior Software Developer (Stage)</h3>
+            <h3 data-i18n="ab_tl_r2">Junior Software Developer (Stage)</h3>
             <p class="company">Datasur</p>
-            <p>Software development projecten en het opdoen van praktijkervaring in een professionele omgeving.</p>
+            <p data-i18n="ab_tl_b2"></p>
           </div>
         </div>
-        
-        <div class="timeline-item reveal-element tilt-card hover-lift" data-reveal data-tilt>
-          <div class="timeline-date">2023 - Heden</div>
+        <div class="timeline-item">
+          <div class="timeline-date" data-i18n="ab_tl_d3">2026 – heden</div>
           <div class="timeline-content">
-            <h3>Eigenaar / System Administrator</h3>
-            <p class="company">JiNet Solutions (Eigen Bedrijf)</p>
-            <p>IT-diensten voor kleine bedrijven: netwerken, reparaties, camera installaties en webdevelopment.</p>
+            <h3 data-i18n="ab_tl_r3">Software Developer</h3>
+            <p class="company" data-i18n="ab_tl_co3">JiNet Solutions</p>
+            <p data-i18n="ab_tl_b3"></p>
           </div>
         </div>
-        
-        <div class="timeline-item reveal-element tilt-card hover-lift" data-reveal data-tilt>
-          <div class="timeline-date">2021 - 2025</div>
+        <div class="timeline-item">
+          <div class="timeline-date" data-i18n="ab_tl_d4">2021 – 2025</div>
           <div class="timeline-content">
-            <h3>Software Engineering</h3>
+            <h3 data-i18n="ab_tl_r4">Software Engineering</h3>
             <p class="company">Natin</p>
-            <p>Hogere opleiding Software Engineering met focus op netwerken en programmeren.</p>
+            <p data-i18n="ab_tl_b4"></p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Education & Certs -->
-  <section class="section" style="position: relative; z-index: 1;">
+  <section class="section">
     <div class="container">
-      <h2 class="section-title reveal-element" data-reveal>Opleiding & Certificaten</h2>
-      <div class="grid grid-3 stagger-container">
-        <div class="card cert-card reveal-element tilt-card hover-lift" data-reveal data-tilt>
-          <div class="tilt-card-shine"></div>
-          <div class="tilt-card-content">
-          <h3>Bachelor of Science in Software Engineering</h3>
+      <h2 class="section-title" data-i18n="ab_edu_title">Opleiding & Certificaten</h2>
+      <div class="grid grid-3">
+        <div class="card cert-card">
+          <h3 data-i18n="ab_cert_bsc">Bachelor in ICT in Software Engineering</h3>
           <p class="institution">Unasat</p>
-          <p class="year">2025 - Heden</p>
+          <p class="year" data-i18n="ab_cert_unasat_year">2025 – heden</p>
         </div>
-        </div>
-        
-        <div class="card cert-card reveal-element tilt-card hover-lift" data-reveal data-tilt>
-          <div class="tilt-card-shine"></div>
-          <div class="tilt-card-content">
-          <h3>Software Engineering</h3>
+        <div class="card cert-card">
+          <h3 data-i18n="ab_cert_se">Software Engineering</h3>
           <p class="institution">Natin</p>
-          <p class="year">2021 - 2023 Medewerker Beheer ICT</p>
-          <p class="year">2023 - 2025 Software Developer</p>
+          <p class="year" data-i18n="ab_cert_natin_line1"></p>
+          <p class="year" data-i18n="ab_cert_natin_line2"></p>
         </div>
-        </div>
-        
-        <div class="card cert-card reveal-element tilt-card hover-lift" data-reveal data-tilt>
-          <div class="tilt-card-shine"></div>
-          <div class="tilt-card-content">
-          <h3>Cisco Certifications</h3>
+        <div class="card cert-card">
+          <h3 data-i18n="ab_cert_cisco">Cisco Certifications</h3>
           <p class="institution">Cisco</p>
-          <p class="year">CCNA Certification</p>
-          <p class="year">ITN Certification - Mei 2023</p>
+          <p class="year" data-i18n="ab_cert_ccna"></p>
+          <p class="year" data-i18n="ab_cert_itn"></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Detail -->
-  <section class="section" style="background: var(--bg-light); position: relative; z-index: 1;">
+  <section class="section section-muted">
     <div class="container">
-      <h2 class="section-title reveal-element" data-reveal>Vaardigheden in Detail</h2>
-      <div class="skills-detail stagger-container">
-        <div class="skill-category reveal-element tilt-card hover-lift" data-reveal data-tilt>
-          <div class="tilt-card-shine"></div>
-          <div class="tilt-card-content">
+      <h2 class="section-title" data-i18n="ab_detail_title">Vaardigheden in Detail</h2>
+      <div class="skills-detail">
+        <div class="skill-category">
           <h3>Netwerk Engineering</h3>
           <ul>
             <li>TCP/IP, DNS, DHCP</li>
@@ -202,11 +147,7 @@
             <li>DNS management</li>
           </ul>
         </div>
-        </div>
-        
-        <div class="skill-category reveal-element tilt-card hover-lift" data-reveal data-tilt>
-          <div class="tilt-card-shine"></div>
-          <div class="tilt-card-content">
+        <div class="skill-category">
           <h3>System Administration</h3>
           <ul>
             <li>Windows Server 2016/2019/2022</li>
@@ -216,11 +157,7 @@
             <li>Backup & Recovery</li>
           </ul>
         </div>
-        </div>
-        
-        <div class="skill-category reveal-element tilt-card hover-lift" data-reveal data-tilt>
-          <div class="tilt-card-shine"></div>
-          <div class="tilt-card-content">
+        <div class="skill-category">
           <h3>Web Development</h3>
           <ul>
             <li>HTML5, CSS3, JavaScript</li>
@@ -233,11 +170,7 @@
             <li>Database integratie</li>
           </ul>
         </div>
-        </div>
-        
-        <div class="skill-category reveal-element tilt-card hover-lift" data-reveal data-tilt>
-          <div class="tilt-card-shine"></div>
-          <div class="tilt-card-content">
+        <div class="skill-category">
           <h3>Security & CCTV</h3>
           <ul>
             <li>NVR & Camera systemen</li>
@@ -246,11 +179,7 @@
             <li>Security audits</li>
           </ul>
         </div>
-        </div>
-        
-        <div class="skill-category reveal-element tilt-card hover-lift" data-reveal data-tilt>
-          <div class="tilt-card-shine"></div>
-          <div class="tilt-card-content">
+        <div class="skill-category">
           <h3>Software Development</h3>
           <ul>
             <li>Flutter</li>
@@ -265,22 +194,19 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>2026 Neïel Altmann. Alle rechten voorbehouden.</p>
+      <p data-i18n="footer_copyright">2026 Neïel Altmann. Alle rechten voorbehouden.</p>
     </div>
   </footer>
 
-  <!-- Floating Language Toggle -->
   <div class="lang-toggle">
-    <button id="lang-nl" class="lang-btn active">NL</button>
-    <button id="lang-en" class="lang-btn">EN</button>
+    <button type="button" id="lang-nl" class="lang-btn active">NL</button>
+    <button type="button" id="lang-en" class="lang-btn">EN</button>
   </div>
 
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/parallax-3d.js"></script>
   <script src="js/about.js"></script>
 </body>
 </html>
