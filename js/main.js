@@ -46,6 +46,51 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  initSoftPhotoParallax();
   
   console.log('Portfolio website loaded successfully');
 });
+
+/**
+ * Licht parallax-shift op hero-foto’s (desktop); past bij layered hero-CSS.
+ */
+function initSoftPhotoParallax() {
+  if (!window.matchMedia || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    return;
+  }
+
+  const shells = document.querySelectorAll('[data-soft-parallax]');
+  if (!shells.length) return;
+
+  function updateParallaxPhotos() {
+    const vh = window.innerHeight || 1;
+    shells.forEach(function(shell) {
+      const img = shell.querySelector('.parallax-photo-target');
+      if (!img) return;
+      const rect = shell.getBoundingClientRect();
+      const centerY = rect.top + rect.height / 2;
+      const offset = centerY - vh / 2;
+      let shift = offset / vh * 22;
+      if (shift > 14) shift = 14;
+      if (shift < -14) shift = -14;
+      shell.style.setProperty('--parallax-y', shift.toFixed(2) + 'px');
+    });
+  }
+
+  let ticking = false;
+  window.addEventListener('scroll', function() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function() {
+      updateParallaxPhotos();
+      ticking = false;
+    });
+  }, { passive: true });
+
+  window.addEventListener('resize', updateParallaxPhotos, { passive: true });
+  updateParallaxPhotos();
+}

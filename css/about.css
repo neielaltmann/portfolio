@@ -10,6 +10,54 @@
   align-items: center;
 }
 
+/* Gelaagde gloed zoals home hero — extra diepte bij openen/scrollen */
+.about-hero.hero-parallax {
+  position: relative;
+  overflow-x: clip;
+  isolation: isolate;
+}
+
+.about-hero.hero-parallax::before {
+  content: '';
+  position: absolute;
+  inset: -5% -10%;
+  background:
+    radial-gradient(ellipse 75% 55% at 12% 15%, rgba(59, 130, 246, 0.1), transparent 58%),
+    radial-gradient(ellipse 70% 50% at 92% 75%, rgba(20, 184, 166, 0.08), transparent 55%),
+    radial-gradient(ellipse 55% 40% at 50% 0%, rgba(16, 185, 129, 0.05), transparent 50%);
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-hero.hero-parallax .about-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Match home hero: gradient stays fixed vs scroll on larger screens */
+@media (prefers-reduced-motion: no-preference) {
+  @media (min-width: 769px) {
+    .about-hero.hero-parallax {
+      background-attachment: fixed;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-hero.hero-parallax {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero.hero-parallax {
+    background-attachment: scroll;
+  }
+}
+
 .about-hero-content {
   max-width: 1200px;
   margin: 0 auto;
